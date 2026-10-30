@@ -1,0 +1,15 @@
+exp014-builtin-equal-time-25ms: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 12s
+  20/100 pairs finished after 20s
+  30/100 pairs finished after 30s
+  40/100 pairs finished after 38s
+  50/100 pairs finished after 46s
+  60/100 pairs finished after 55s
+  70/100 pairs finished after 63s
+  80/100 pairs finished after 73s
+  90/100 pairs finished after 81s
+  100/100 pairs finished after 90s
+
+exp014-builtin-equal-time-25ms: 200 games, score 96.8%, Elo 589.5 (95% CI 515.3 to 715.3, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp014-builtin-equal-time-25ms/report.md

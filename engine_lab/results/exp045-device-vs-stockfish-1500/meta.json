@@ -1,0 +1,13 @@
+{
+  "experiment_id": "exp045-device-vs-stockfish-1500",
+  "source": "on-device runner (OnDeviceCalibrationRun)",
+  "imported_at": "2026-10-30T00:57:10+00:00",
+  "hardware": {
+    "device": "Google Pixel 8",
+    "android": "17",
+    "sdk": 37,
+    "abis": "arm64-v8a",
+    "started_at": "2026-10-30T00:33:29.965522Z",
+    "pairs_requested": 30
+  }
+}

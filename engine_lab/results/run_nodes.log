@@ -1,0 +1,30 @@
+exp000-aa-control: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 10s
+  20/100 pairs finished after 17s
+  30/100 pairs finished after 26s
+  40/100 pairs finished after 34s
+  50/100 pairs finished after 42s
+  60/100 pairs finished after 52s
+  70/100 pairs finished after 59s
+  80/100 pairs finished after 70s
+  90/100 pairs finished after 75s
+  100/100 pairs finished after 86s
+
+exp000-aa-control: 200 games, score 50.0%, Elo -0.0 (95% CI -7.5 to 7.5, pentanomial)
+No measurable difference: the 95% interval includes zero at this sample size.
+Report: engine_lab/results/exp000-aa-control/report.md
+exp001-doubled-nodes: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 12s
+  20/100 pairs finished after 23s
+  30/100 pairs finished after 33s
+  40/100 pairs finished after 45s
+  50/100 pairs finished after 56s
+  60/100 pairs finished after 68s
+  70/100 pairs finished after 77s
+  80/100 pairs finished after 90s
+  90/100 pairs finished after 104s
+  100/100 pairs finished after 114s
+
+exp001-doubled-nodes: 200 games, score 70.8%, Elo 153.4 (95% CI 122.6 to 186.7, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp001-doubled-nodes/report.md

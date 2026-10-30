@@ -1,0 +1,117 @@
+{
+  "id": "exp012-baseline-vs-stockfish-easy",
+  "title": "Calibration: original built-in engine against Stockfish Easy",
+  "description": "Stockfish limited to 1350 Elo at 0.1 s per move (the app's Easy level) is the baseline; the candidate is the original built-in engine at depth 4. A score below 50% means the built-in engine is weaker than that Stockfish preset.",
+  "hypothesis": "Measures where the original engine sits relative to a Stockfish preset; no direction assumed.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 100,
+  "pairs": 100,
+  "incomplete_pairs": 0,
+  "games": 200,
+  "engine_version": "Stockfish 19",
+  "time_control": "baseline time 0.1 | candidate depth 4",
+  "baseline": {
+    "name": "Stockfish 19, app Easy (Elo 1350, 0.1 s)",
+    "limits": "time 0.1",
+    "options": {
+      "Threads": 1,
+      "Hash": 16,
+      "UCI_LimitStrength": true,
+      "UCI_Elo": 1350
+    }
+  },
+  "candidate": {
+    "name": "Built-in baseline (depth 4, as shipped Hard)",
+    "limits": "depth 4",
+    "options": {
+      "Variant": "baseline",
+      "Hash": 32,
+      "Depth": 4
+    }
+  },
+  "wins": 107,
+  "draws": 22,
+  "losses": 71,
+  "score_pct": 59.0,
+  "elo_diff": 63.2,
+  "elo_ci_low": 17.8,
+  "elo_ci_high": 111.0,
+  "ci_open_ended": false,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 99.7,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.59,
+    "elo": 63.2,
+    "low": 18.0,
+    "high": 110.7,
+    "los": 0.997
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.59,
+    "elo": 63.2,
+    "low": 17.8,
+    "high": 111.0,
+    "los": 0.9969
+  },
+  "pair_buckets": {
+    "0": 13,
+    "0.5": 8,
+    "1": 37,
+    "1.5": 14,
+    "2": 28
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "adjudicated_win": 87,
+    "checkmate": 91,
+    "threefold_repetition": 22
+  },
+  "avg_plies": 68.3,
+  "baseline_stats": {
+    "moves": 6845,
+    "avg_nps": 1085418,
+    "avg_depth": 17.3,
+    "avg_move_ms": 100.18,
+    "peak_rss_mb": 376.8
+  },
+  "candidate_stats": {
+    "moves": 6820,
+    "avg_nps": 570480,
+    "avg_depth": 4.0,
+    "avg_move_ms": 18.2,
+    "peak_rss_mb": 145.0
+  },
+  "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+  "created_at": "2026-10-29T20:15:49+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp012-baseline-vs-stockfish-easy",
+  "meta": {
+    "experiment_id": "exp012-baseline-vs-stockfish-easy",
+    "started_at": "2026-10-29T20:06:03+00:00",
+    "lab_version": "1.0.0",
+    "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+    "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+    "experiment_file": "engine_lab/experiments/exp012-baseline-vs-stockfish-easy.json",
+    "experiment_sha256": "c0fb6dc1e43193e757368bc330807f2198d4563b5fc90095d55006229ed68ae2",
+    "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+    "hardware": {
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "cpu": "Apple M1",
+      "logical_cpus": 8,
+      "memory_gb": 8.6,
+      "python": "3.12.2",
+      "python_chess": "1.11.2"
+    },
+    "workers": 4,
+    "command": "engine_lab/enginelab/__main__.py run exp012 --fresh",
+    "finished_at": "2026-10-29T20:09:40+00:00"
+  }
+}

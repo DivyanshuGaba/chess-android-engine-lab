@@ -1,0 +1,16 @@
+
+com.divyanshu.chess.BoardUiTest:.....
+com.divyanshu.chess.BuiltInEngineInstrumentedTest:..
+com.divyanshu.chess.MainThreadResponsivenessTest:..
+com.divyanshu.chess.OnDeviceCalibrationRun:
+com.divyanshu.chess.OnDeviceCalibrationRun:
+com.divyanshu.chess.SpectatorSoakRun:
+com.divyanshu.chess.SpectatorSoakRun:
+com.divyanshu.chess.SpectatorUiTest:....
+com.divyanshu.chess.StockfishInstrumentedTest:........
+
+Time: 23.632
+
+OK (23 tests)
+
+

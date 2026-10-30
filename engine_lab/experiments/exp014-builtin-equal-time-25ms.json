@@ -1,0 +1,45 @@
+{
+  "id": "exp014-builtin-equal-time-25ms",
+  "title": "Built-in engine: improved search at matched wall-clock time",
+  "description": "exp010 labelled itself equal-time, but the baseline averaged 21.6 ms per move and the candidate 44.8 ms, so the candidate had about twice the time. Here the candidate's budget is cut to 25 ms so its measured average move time matches the baseline's (the report shows the actual figures).",
+  "hypothesis": "The improved engine still scores clearly above 50% when its measured time per move matches the baseline's.",
+  "engine": "bin/stockfish-macos-universal",
+  "baseline": {
+    "name": "Built-in baseline (depth 4, as shipped Hard)",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "baseline",
+      "Hash": 32,
+      "Depth": 4
+    },
+    "limits": {
+      "depth": 4
+    }
+  },
+  "candidate": {
+    "name": "Built-in advanced, 25 ms",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    },
+    "limits": {
+      "time": 0.025
+    }
+  },
+  "openings": {
+    "source": "random",
+    "seed": 20261029,
+    "count": 100,
+    "plies": 8,
+    "max_abs_cp": 100,
+    "filter_depth": 8
+  },
+  "adjudication": {
+    "cp": 1000,
+    "plies": 6,
+    "max_plies": 400
+  },
+  "workers": 4,
+  "min_pairs_for_conclusion": 100
+}

@@ -1,0 +1,45 @@
+{
+  "id": "exp013-advanced-vs-stockfish-easy",
+  "title": "Calibration: improved built-in engine against Stockfish Easy",
+  "description": "Stockfish at the app's Easy level (1350 Elo, 0.1 s) against the improved built-in engine at 0.3 s per move.",
+  "hypothesis": "Measures where the improved engine sits relative to the same Stockfish preset; no direction assumed.",
+  "engine": "bin/stockfish-macos-universal",
+  "baseline": {
+    "name": "Stockfish 19, app Easy (Elo 1350, 0.1 s)",
+    "options": {
+      "Threads": 1,
+      "Hash": 16,
+      "UCI_LimitStrength": true,
+      "UCI_Elo": 1350
+    },
+    "limits": {
+      "time": 0.1
+    }
+  },
+  "candidate": {
+    "name": "Built-in advanced, 300 ms",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    },
+    "limits": {
+      "time": 0.3
+    }
+  },
+  "openings": {
+    "source": "random",
+    "seed": 20261029,
+    "count": 100,
+    "plies": 8,
+    "max_abs_cp": 100,
+    "filter_depth": 8
+  },
+  "adjudication": {
+    "cp": 1000,
+    "plies": 6,
+    "max_plies": 400
+  },
+  "workers": 4,
+  "min_pairs_for_conclusion": 50
+}

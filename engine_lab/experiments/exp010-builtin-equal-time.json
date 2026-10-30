@@ -1,0 +1,45 @@
+{
+  "id": "exp010-builtin-equal-time",
+  "title": "Built-in engine: improved search at 50 ms (about twice the baseline's time)",
+  "description": "The original fixed-depth minimax at depth 4 against the improved engine limited to 50 ms per move. The baseline turned out to average about 22 ms per move and the candidate about 45 ms, so this is NOT equal time: see exp014 for the matched-time run.",
+  "hypothesis": "The improved engine scores clearly above 50%.",
+  "engine": "bin/stockfish-macos-universal",
+  "baseline": {
+    "name": "Built-in baseline (depth 4, as shipped Hard)",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "baseline",
+      "Hash": 32,
+      "Depth": 4
+    },
+    "limits": {
+      "depth": 4
+    }
+  },
+  "candidate": {
+    "name": "Built-in advanced, 50 ms",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    },
+    "limits": {
+      "time": 0.05
+    }
+  },
+  "openings": {
+    "source": "random",
+    "seed": 20261029,
+    "count": 100,
+    "plies": 8,
+    "max_abs_cp": 100,
+    "filter_depth": 8
+  },
+  "adjudication": {
+    "cp": 1000,
+    "plies": 6,
+    "max_plies": 400
+  },
+  "workers": 4,
+  "min_pairs_for_conclusion": 100
+}

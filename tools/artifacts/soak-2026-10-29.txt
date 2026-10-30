@@ -1,0 +1,11 @@
+Spectator soak on a Pixel 8 (Android, arm64, phone on charge), 5 consecutive matches,
+built-in Hard (White) vs Stockfish 19 Medium (Black), speed "Fast", through the real SpectatorViewModel.
+
+start: battery 50%, 38.3 C, thermal 0, heap 2 MB
+game 1: Checkmate!, 110 plies, 54 s, battery 51%, 38.2 C, thermal 0, heap 2 MB, native 6 MB, engine processes 1
+game 2: Checkmate!, 87 plies, 40 s, battery 52%, 38.4 C, thermal 0, heap 2 MB, native 7 MB, engine processes 1
+game 3: Checkmate!, 77 plies, 36 s, battery 52%, 38.4 C, thermal 0, heap 2 MB, native 7 MB, engine processes 1
+game 4: Checkmate!, 125 plies, 56 s, battery 53%, 38.4 C, thermal 0, heap 2 MB, native 7 MB, engine processes 1
+game 5: Checkmate!, 62 plies, 28 s, battery 54%, 38.7 C, thermal 0, heap 2 MB, native 7 MB, engine processes 1
+end: heap 2 MB (start 2 MB), engine processes after shutdown 0, worst thermal status 0
+OK (1 test)

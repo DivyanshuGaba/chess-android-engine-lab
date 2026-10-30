@@ -1,0 +1,117 @@
+{
+  "id": "exp000-aa-control",
+  "title": "A/A control: identical strength, jittered budgets",
+  "description": "Both sides have the same expected strength: the same options and an average budget of 10,000 nodes, with each move's budget randomly varied by up to 10% (seeded). Fixed-node Stockfish is deterministic, so without the jitter identical engines would replay mirrored games and the control would prove nothing. A sound harness must report a score near 50%; a large gap would reveal a bias in colours, openings or scoring.",
+  "hypothesis": "Score is 50% and the Elo interval includes zero.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 100,
+  "pairs": 100,
+  "incomplete_pairs": 0,
+  "games": 200,
+  "engine_version": "Stockfish 19",
+  "time_control": "baseline nodes 10000 (jitter +/-10%) | candidate nodes 10000 (jitter +/-10%)",
+  "baseline": {
+    "name": "Stockfish 19, 10k nodes",
+    "limits": "nodes 10000 (jitter +/-10%)",
+    "options": {
+      "Threads": 1,
+      "Hash": 16
+    }
+  },
+  "candidate": {
+    "name": "Stockfish 19, 10k nodes (copy)",
+    "limits": "nodes 10000 (jitter +/-10%)",
+    "options": {
+      "Threads": 1,
+      "Hash": 16
+    }
+  },
+  "wins": 63,
+  "draws": 87,
+  "losses": 50,
+  "score_pct": 53.25,
+  "elo_diff": 22.6,
+  "elo_ci_low": -12.4,
+  "elo_ci_high": 58.1,
+  "ci_open_ended": false,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 89.7,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.5325,
+    "elo": 22.6,
+    "low": -13.5,
+    "high": 59.2,
+    "los": 0.8902
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.5325,
+    "elo": 22.6,
+    "low": -12.4,
+    "high": 58.1,
+    "los": 0.8974
+  },
+  "pair_buckets": {
+    "0": 6,
+    "0.5": 20,
+    "1": 38,
+    "1.5": 27,
+    "2": 9
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "threefold_repetition": 64,
+    "checkmate": 9,
+    "adjudicated_win": 104,
+    "fifty_moves": 6,
+    "insufficient_material": 14,
+    "stalemate": 3
+  },
+  "avg_plies": 126.1,
+  "baseline_stats": {
+    "moves": 12607,
+    "avg_nps": 862145,
+    "avg_depth": 12.82,
+    "avg_move_ms": 12.9,
+    "peak_rss_mb": 372.0
+  },
+  "candidate_stats": {
+    "moves": 12609,
+    "avg_nps": 858309,
+    "avg_depth": 12.93,
+    "avg_move_ms": 12.97,
+    "peak_rss_mb": 371.4
+  },
+  "verdict": "No measurable difference: the 95% interval includes zero at this sample size.",
+  "created_at": "2026-10-29T19:40:31+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp000-aa-control",
+  "meta": {
+    "experiment_id": "exp000-aa-control",
+    "started_at": "2026-10-29T19:09:34+00:00",
+    "lab_version": "1.0.0",
+    "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+    "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+    "experiment_file": "engine_lab/experiments/exp000-aa-control.json",
+    "experiment_sha256": "2106242987fd14fdb7f1ad6d4329a10efeb6ea07e73a5910cf6a0c5cac0c7564",
+    "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+    "hardware": {
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "cpu": "Apple M1",
+      "logical_cpus": 8,
+      "memory_gb": 8.6,
+      "python": "3.12.2",
+      "python_chess": "1.11.2"
+    },
+    "workers": 4,
+    "command": "engine_lab/enginelab/__main__.py run exp000 --fresh",
+    "finished_at": "2026-10-29T19:11:10+00:00"
+  }
+}

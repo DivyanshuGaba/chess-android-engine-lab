@@ -1,0 +1,106 @@
+{
+  "id": "exp044-device-vs-stockfish-1350",
+  "title": "On the Pixel 8: built-in Hard against Stockfish at UCI_Elo 1350",
+  "description": "The same match as the Mac calibration, but played on the phone: the app's real built-in Hard engine (0.3 s per move, a fresh search table every move, exactly as the app plays it) against Stockfish limited to 1350 Elo, also 0.3 s per move, both running on the Pixel 8. The phone's CPU is much slower than the Mac for the built-in engine, so this measures what a player actually faces.",
+  "hypothesis": "Finds where the built-in engine stops winning on the phone itself; no direction assumed.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 30,
+  "pairs": 30,
+  "incomplete_pairs": 0,
+  "games": 60,
+  "engine_version": "Stockfish 19 and built-in advanced, on device",
+  "time_control": "device; 300 ms per move each",
+  "baseline": {
+    "name": "Stockfish 19, UCI_Elo 1350, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+      "Threads": 1,
+      "Hash": 16,
+      "UCI_LimitStrength": true,
+      "UCI_Elo": 1350
+    }
+  },
+  "candidate": {
+    "name": "Built-in Hard, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+      "Variant": "advanced"
+    }
+  },
+  "wins": 56,
+  "draws": 2,
+  "losses": 2,
+  "score_pct": 95.0,
+  "elo_diff": 511.5,
+  "elo_ci_low": 384.7,
+  "elo_ci_high": 1123.8,
+  "ci_open_ended": false,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 100.0,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 60,
+    "score": 0.95,
+    "elo": 511.5,
+    "low": 381.6,
+    "high": 1600.0,
+    "los": 1.0
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 30,
+    "score": 0.95,
+    "elo": 511.5,
+    "low": 384.7,
+    "high": 1123.8,
+    "los": 1.0
+  },
+  "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 2,
+    "1.5": 2,
+    "2": 26
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "checkmate": 16,
+    "adjudicated_win": 42,
+    "threefold_repetition": 2
+  },
+  "avg_plies": 60.9,
+  "baseline_stats": {
+    "moves": 1830,
+    "avg_nps": 212239,
+    "avg_depth": 16.07,
+    "avg_move_ms": 309.58,
+    "peak_rss_mb": null
+  },
+  "candidate_stats": {
+    "moves": 1824,
+    "avg_nps": 28459,
+    "avg_depth": 3.28,
+    "avg_move_ms": 232.42,
+    "peak_rss_mb": null
+  },
+  "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+  "created_at": "2026-10-30T01:06:22+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp044-device-vs-stockfish-1350",
+  "meta": {
+    "experiment_id": "exp044-device-vs-stockfish-1350",
+    "source": "on-device runner (OnDeviceCalibrationRun)",
+    "imported_at": "2026-10-30T01:06:22+00:00",
+    "hardware": {
+      "device": "Google Pixel 8",
+      "android": "17",
+      "sdk": 37,
+      "abis": "arm64-v8a",
+      "started_at": "2026-10-30T00:57:13.776599Z",
+      "pairs_requested": 30
+    }
+  }
+}

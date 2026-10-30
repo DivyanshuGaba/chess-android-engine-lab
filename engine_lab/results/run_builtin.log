@@ -1,0 +1,50 @@
+exp010-builtin-equal-time: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 14s
+  20/100 pairs finished after 24s
+  30/100 pairs finished after 38s
+  40/100 pairs finished after 47s
+  50/100 pairs finished after 61s
+  60/100 pairs finished after 73s
+  70/100 pairs finished after 85s
+  80/100 pairs finished after 97s
+  90/100 pairs finished after 110s
+  100/100 pairs finished after 120s
+
+exp010-builtin-equal-time: 200 games, score 98.2%, Elo 699.7 (95% CI 603.8 to 919.6, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp010-builtin-equal-time/report.md
+exp011-builtin-300ms: 50 opening pairs, 0 already done, 50 to play
+  10/50 pairs finished after 43s
+  20/50 pairs finished after 89s
+  30/50 pairs finished after 128s
+  40/50 pairs finished after 162s
+  50/50 pairs finished after 199s
+
+exp011-builtin-300ms: 100 games, score 100.0%, Elo None (95% CI 568.9 to None, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp011-builtin-300ms/report.md
+exp012-baseline-vs-stockfish-easy: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 22s
+  20/100 pairs finished after 49s
+  30/100 pairs finished after 70s
+  40/100 pairs finished after 91s
+  50/100 pairs finished after 115s
+  60/100 pairs finished after 133s
+  70/100 pairs finished after 156s
+  80/100 pairs finished after 173s
+  90/100 pairs finished after 193s
+  100/100 pairs finished after 217s
+
+exp012-baseline-vs-stockfish-easy: 200 games, score 59.0%, Elo 63.2 (95% CI 17.8 to 111.0, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp012-baseline-vs-stockfish-easy/report.md
+exp013-advanced-vs-stockfish-easy: 50 opening pairs, 0 already done, 50 to play
+  10/50 pairs finished after 48s
+  20/50 pairs finished after 94s
+  30/50 pairs finished after 137s
+  40/50 pairs finished after 187s
+  50/50 pairs finished after 237s
+
+exp013-advanced-vs-stockfish-easy: 100 games, score 99.0%, Elo 798.3 (95% CI 607.5 to None, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp013-advanced-vs-stockfish-easy/report.md

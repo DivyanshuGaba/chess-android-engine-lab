@@ -1,0 +1,13 @@
+{
+  "id": "exp003-hard-vs-medium",
+  "title": "App difficulty ladder: Hard against Medium",
+  "description": "The app's Hard level (no strength cap, 1 s per move) against its Medium level (UCI_Elo 1800, 0.3 s per move).",
+  "hypothesis": "Hard beats Medium; the Elo interval excludes zero.",
+  "engine": "bin/stockfish-macos-universal",
+  "baseline":  {"name": "App Medium (Elo 1800, 0.3 s)", "options": {"Threads": 1, "Hash": 16, "UCI_LimitStrength": true, "UCI_Elo": 1800}, "limits": {"time": 0.3}},
+  "candidate": {"name": "App Hard (full strength, 1 s)", "options": {"Threads": 1, "Hash": 16, "UCI_LimitStrength": false}, "limits": {"time": 1.0}},
+  "openings": {"source": "random", "seed": 20261029, "count": 100, "plies": 8, "max_abs_cp": 100, "filter_depth": 8},
+  "adjudication": {"cp": 1000, "plies": 6, "max_plies": 400},
+  "workers": 3,
+  "min_pairs_for_conclusion": 40
+}

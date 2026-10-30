@@ -1,0 +1,117 @@
+{
+  "id": "exp025-ablate-evaluation",
+  "title": "Ablation: Piece-square evaluation",
+  "description": "The full improved engine against the same engine with only one thing changed: with the original (material + centre) evaluation. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+  "hypothesis": "Piece-square evaluation helps: the full engine scores above 50%.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 100,
+  "pairs": 100,
+  "incomplete_pairs": 0,
+  "games": 200,
+  "engine_version": "BuiltIn-UCI 1.0",
+  "time_control": "baseline time 0.05 | candidate time 0.05",
+  "baseline": {
+    "name": "With the original (material + centre) evaluation, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32,
+      "Evaluation": "legacy"
+    }
+  },
+  "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    }
+  },
+  "wins": 124,
+  "draws": 29,
+  "losses": 47,
+  "score_pct": 69.25,
+  "elo_diff": 141.0,
+  "elo_ci_low": 93.8,
+  "elo_ci_high": 193.9,
+  "ci_open_ended": false,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 100.0,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.6925,
+    "elo": 141.0,
+    "low": 95.6,
+    "high": 191.6,
+    "los": 1.0
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.6925,
+    "elo": 141.0,
+    "low": 93.8,
+    "high": 193.9,
+    "los": 1.0
+  },
+  "pair_buckets": {
+    "0": 6,
+    "0.5": 8,
+    "1": 31,
+    "1.5": 13,
+    "2": 42
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "adjudicated_win": 143,
+    "insufficient_material": 6,
+    "threefold_repetition": 10,
+    "checkmate": 28,
+    "fifty_moves": 13
+  },
+  "avg_plies": 119.9,
+  "baseline_stats": {
+    "moves": 11980,
+    "avg_nps": 800913,
+    "avg_depth": 5.23,
+    "avg_move_ms": 44.56,
+    "peak_rss_mb": 185.8
+  },
+  "candidate_stats": {
+    "moves": 11996,
+    "avg_nps": 782654,
+    "avg_depth": 5.11,
+    "avg_move_ms": 45.0,
+    "peak_rss_mb": 138.1
+  },
+  "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+  "created_at": "2026-10-29T23:05:11+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp025-ablate-evaluation",
+  "meta": {
+    "experiment_id": "exp025-ablate-evaluation",
+    "started_at": "2026-10-29T22:21:24+00:00",
+    "lab_version": "1.0.0",
+    "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+    "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+    "experiment_file": "engine_lab/experiments/exp025-ablate-evaluation.json",
+    "experiment_sha256": "2f853ee5b6a087205caddba0ebd2cc62a9ecc4cd3e8562c6833cd94f90c1718e",
+    "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+    "hardware": {
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "cpu": "Apple M1",
+      "logical_cpus": 8,
+      "memory_gb": 8.6,
+      "python": "3.12.2",
+      "python_chess": "1.11.2"
+    },
+    "workers": 4,
+    "command": "engine_lab/enginelab/__main__.py run exp025 --fresh",
+    "finished_at": "2026-10-29T22:26:13+00:00"
+  }
+}

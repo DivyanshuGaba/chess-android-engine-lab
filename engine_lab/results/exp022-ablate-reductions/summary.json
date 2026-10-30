@@ -1,0 +1,117 @@
+{
+  "id": "exp022-ablate-reductions",
+  "title": "Ablation: Late move reductions",
+  "description": "The full improved engine against the same engine with only one thing changed: without late move reductions. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+  "hypothesis": "Late move reductions helps: the full engine scores above 50%.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 100,
+  "pairs": 100,
+  "incomplete_pairs": 0,
+  "games": 200,
+  "engine_version": "BuiltIn-UCI 1.0",
+  "time_control": "baseline time 0.05 | candidate time 0.05",
+  "baseline": {
+    "name": "Without late move reductions, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32,
+      "Reductions": false
+    }
+  },
+  "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    }
+  },
+  "wins": 81,
+  "draws": 45,
+  "losses": 74,
+  "score_pct": 51.75,
+  "elo_diff": 12.2,
+  "elo_ci_low": -30.0,
+  "elo_ci_high": 54.7,
+  "ci_open_ended": false,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 71.5,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.5175,
+    "elo": 12.2,
+    "low": -30.3,
+    "high": 55.0,
+    "los": 0.7132
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.5175,
+    "elo": 12.2,
+    "low": -30.0,
+    "high": 54.7,
+    "los": 0.7146
+  },
+  "pair_buckets": {
+    "0": 12,
+    "0.5": 18,
+    "1": 40,
+    "1.5": 11,
+    "2": 19
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "checkmate": 40,
+    "adjudicated_win": 115,
+    "threefold_repetition": 29,
+    "insufficient_material": 13,
+    "fifty_moves": 3
+  },
+  "avg_plies": 124.9,
+  "baseline_stats": {
+    "moves": 12498,
+    "avg_nps": 839487,
+    "avg_depth": 4.71,
+    "avg_move_ms": 46.74,
+    "peak_rss_mb": 189.4
+  },
+  "candidate_stats": {
+    "moves": 12477,
+    "avg_nps": 790030,
+    "avg_depth": 5.27,
+    "avg_move_ms": 45.01,
+    "peak_rss_mb": 140.8
+  },
+  "verdict": "No measurable difference: the 95% interval includes zero at this sample size.",
+  "created_at": "2026-10-29T23:05:09+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp022-ablate-reductions",
+  "meta": {
+    "experiment_id": "exp022-ablate-reductions",
+    "started_at": "2026-10-29T22:06:51+00:00",
+    "lab_version": "1.0.0",
+    "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+    "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+    "experiment_file": "engine_lab/experiments/exp022-ablate-reductions.json",
+    "experiment_sha256": "1ce78231b16232c9fd5e4f3a4e2407f1fdaf4b7ae858453b5040fe592e1bd0af",
+    "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+    "hardware": {
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "cpu": "Apple M1",
+      "logical_cpus": 8,
+      "memory_gb": 8.6,
+      "python": "3.12.2",
+      "python_chess": "1.11.2"
+    },
+    "workers": 4,
+    "command": "engine_lab/enginelab/__main__.py run exp022 --fresh",
+    "finished_at": "2026-10-29T22:11:50+00:00"
+  }
+}

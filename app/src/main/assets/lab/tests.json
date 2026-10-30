@@ -1,0 +1,23 @@
+{
+ "generated_at": "2026-10-30 01:32 UTC",
+ "suites": [
+  {
+   "name": "Android JVM unit tests",
+   "total": 207,
+   "failures": 0,
+   "skipped": 0
+  },
+  {
+   "name": "Python engine_lab tests",
+   "total": 78,
+   "failures": 0,
+   "skipped": 0
+  },
+  {
+   "name": "Android instrumented tests (Pixel 8)",
+   "total": 23,
+   "failures": 0,
+   "skipped": 0
+  }
+ ]
+}

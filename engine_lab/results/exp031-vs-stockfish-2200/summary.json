@@ -1,0 +1,117 @@
+{
+  "id": "exp031-vs-stockfish-2200",
+  "title": "Calibration: built-in Hard against Stockfish at UCI_Elo 2200",
+  "description": "The built-in Hard engine (0.3 s per move, the app's setting) against Stockfish limited to 2200 Elo with the same 0.3 s per move. UCI_Elo is calibrated for long time controls, so treat it as a ladder rung, not a rating for the built-in engine.",
+  "hypothesis": "Finds the rung of this ladder where the built-in engine stops winning; no direction assumed.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 50,
+  "pairs": 50,
+  "incomplete_pairs": 0,
+  "games": 100,
+  "engine_version": "Stockfish 19",
+  "time_control": "baseline time 0.3 | candidate time 0.3",
+  "baseline": {
+    "name": "Stockfish 19, UCI_Elo 2200, 0.3 s",
+    "limits": "time 0.3",
+    "options": {
+      "Threads": 1,
+      "Hash": 16,
+      "UCI_LimitStrength": true,
+      "UCI_Elo": 2200
+    }
+  },
+  "candidate": {
+    "name": "Built-in Hard (improved engine), 0.3 s",
+    "limits": "time 0.3",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    }
+  },
+  "wins": 27,
+  "draws": 14,
+  "losses": 59,
+  "score_pct": 34.0,
+  "elo_diff": -115.2,
+  "elo_ci_low": -189.4,
+  "elo_ci_high": -50.0,
+  "ci_open_ended": false,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 0.0,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 100,
+    "score": 0.34,
+    "elo": -115.2,
+    "low": -186.5,
+    "high": -52.3,
+    "los": 0.0001
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 50,
+    "score": 0.34,
+    "elo": -115.2,
+    "low": -189.4,
+    "high": -50.0,
+    "los": 0.0002
+  },
+  "pair_buckets": {
+    "0": 19,
+    "0.5": 6,
+    "1": 17,
+    "1.5": 4,
+    "2": 4
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "adjudicated_win": 77,
+    "threefold_repetition": 12,
+    "insufficient_material": 2,
+    "checkmate": 9
+  },
+  "avg_plies": 96.0,
+  "baseline_stats": {
+    "moves": 4786,
+    "avg_nps": 1177377,
+    "avg_depth": 18.0,
+    "avg_move_ms": 298.9,
+    "peak_rss_mb": 374.8
+  },
+  "candidate_stats": {
+    "moves": 4812,
+    "avg_nps": 781074,
+    "avg_depth": 6.78,
+    "avg_move_ms": 249.22,
+    "peak_rss_mb": 134.6
+  },
+  "verdict": "The candidate measured weaker than the baseline; the 95% interval excludes zero.",
+  "created_at": "2026-10-29T23:05:12+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp031-vs-stockfish-2200",
+  "meta": {
+    "experiment_id": "exp031-vs-stockfish-2200",
+    "started_at": "2026-10-29T22:36:53+00:00",
+    "lab_version": "1.0.0",
+    "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+    "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+    "experiment_file": "engine_lab/experiments/exp031-vs-stockfish-2200.json",
+    "experiment_sha256": "349b5cb580e17387ea996ccc3d5d79fa3df9d5b89bf66ed2c146bba2fc73992a",
+    "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+    "hardware": {
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "cpu": "Apple M1",
+      "logical_cpus": 8,
+      "memory_gb": 8.6,
+      "python": "3.12.2",
+      "python_chess": "1.11.2"
+    },
+    "workers": 4,
+    "command": "engine_lab/enginelab/__main__.py run exp031 --pairs 50 --fresh",
+    "finished_at": "2026-10-29T22:48:12+00:00"
+  }
+}

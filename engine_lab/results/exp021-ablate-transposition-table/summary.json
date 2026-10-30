@@ -1,0 +1,117 @@
+{
+  "id": "exp021-ablate-transposition-table",
+  "title": "Ablation: Transposition table",
+  "description": "The full improved engine against the same engine with only one thing changed: without the transposition table. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+  "hypothesis": "Transposition table helps: the full engine scores above 50%.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 100,
+  "pairs": 100,
+  "incomplete_pairs": 0,
+  "games": 200,
+  "engine_version": "BuiltIn-UCI 1.0",
+  "time_control": "baseline time 0.05 | candidate time 0.05",
+  "baseline": {
+    "name": "Without the transposition table, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32,
+      "TranspositionTable": false
+    }
+  },
+  "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    }
+  },
+  "wins": 109,
+  "draws": 30,
+  "losses": 61,
+  "score_pct": 62.0,
+  "elo_diff": 85.0,
+  "elo_ci_low": 41.2,
+  "elo_ci_high": 131.7,
+  "ci_open_ended": false,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 100.0,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.62,
+    "elo": 85.0,
+    "low": 40.7,
+    "high": 132.3,
+    "los": 0.9999
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.62,
+    "elo": 85.0,
+    "low": 41.2,
+    "high": 131.7,
+    "los": 0.9999
+  },
+  "pair_buckets": {
+    "0": 8,
+    "0.5": 11,
+    "1": 36,
+    "1.5": 15,
+    "2": 30
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "checkmate": 35,
+    "adjudicated_win": 135,
+    "threefold_repetition": 17,
+    "insufficient_material": 12,
+    "fifty_moves": 1
+  },
+  "avg_plies": 119.8,
+  "baseline_stats": {
+    "moves": 11996,
+    "avg_nps": 848583,
+    "avg_depth": 4.48,
+    "avg_move_ms": 45.86,
+    "peak_rss_mb": 186.3
+  },
+  "candidate_stats": {
+    "moves": 11958,
+    "avg_nps": 802162,
+    "avg_depth": 5.27,
+    "avg_move_ms": 44.75,
+    "peak_rss_mb": 159.8
+  },
+  "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+  "created_at": "2026-10-29T23:05:08+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp021-ablate-transposition-table",
+  "meta": {
+    "experiment_id": "exp021-ablate-transposition-table",
+    "started_at": "2026-10-29T22:02:05+00:00",
+    "lab_version": "1.0.0",
+    "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+    "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+    "experiment_file": "engine_lab/experiments/exp021-ablate-transposition-table.json",
+    "experiment_sha256": "dc79bf82c821f33ff1f49f89b686fda941e699642361415c44b6aafd480cf918",
+    "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+    "hardware": {
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "cpu": "Apple M1",
+      "logical_cpus": 8,
+      "memory_gb": 8.6,
+      "python": "3.12.2",
+      "python_chess": "1.11.2"
+    },
+    "workers": 4,
+    "command": "engine_lab/enginelab/__main__.py run exp021 --fresh",
+    "finished_at": "2026-10-29T22:06:51+00:00"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "exp025-ablate-evaluation",
+  "title": "Ablation: Piece-square evaluation",
+  "description": "The full improved engine against the same engine with only one thing changed: with the original (material + centre) evaluation. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+  "hypothesis": "Piece-square evaluation helps: the full engine scores above 50%.",
+  "engine": "bin/stockfish-macos-universal",
+  "baseline": {
+    "name": "With the original (material + centre) evaluation, 50 ms",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32,
+      "Evaluation": "legacy"
+    },
+    "limits": {
+      "time": 0.05
+    }
+  },
+  "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    },
+    "limits": {
+      "time": 0.05
+    }
+  },
+  "openings": {
+    "source": "random",
+    "seed": 20261029,
+    "count": 100,
+    "plies": 8,
+    "max_abs_cp": 100,
+    "filter_depth": 8
+  },
+  "adjudication": {
+    "cp": 1000,
+    "plies": 6,
+    "max_plies": 400
+  },
+  "workers": 4,
+  "min_pairs_for_conclusion": 100
+}

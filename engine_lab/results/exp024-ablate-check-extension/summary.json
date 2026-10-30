@@ -1,0 +1,117 @@
+{
+  "id": "exp024-ablate-check-extension",
+  "title": "Ablation: Check extension",
+  "description": "The full improved engine against the same engine with only one thing changed: without check extensions. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+  "hypothesis": "Check extension helps: the full engine scores above 50%.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 100,
+  "pairs": 100,
+  "incomplete_pairs": 0,
+  "games": 200,
+  "engine_version": "BuiltIn-UCI 1.0",
+  "time_control": "baseline time 0.05 | candidate time 0.05",
+  "baseline": {
+    "name": "Without check extensions, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32,
+      "CheckExtension": false
+    }
+  },
+  "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    }
+  },
+  "wins": 90,
+  "draws": 39,
+  "losses": 71,
+  "score_pct": 54.75,
+  "elo_diff": 33.1,
+  "elo_ci_low": -5.1,
+  "elo_ci_high": 72.2,
+  "ci_open_ended": false,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 95.5,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.5475,
+    "elo": 33.1,
+    "low": -10.0,
+    "high": 77.2,
+    "los": 0.934
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.5475,
+    "elo": 33.1,
+    "low": -5.1,
+    "high": 72.2,
+    "los": 0.9551
+  },
+  "pair_buckets": {
+    "0": 8,
+    "0.5": 15,
+    "1": 43,
+    "1.5": 18,
+    "2": 16
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "checkmate": 40,
+    "adjudicated_win": 121,
+    "insufficient_material": 8,
+    "threefold_repetition": 27,
+    "fifty_moves": 4
+  },
+  "avg_plies": 117.8,
+  "baseline_stats": {
+    "moves": 11776,
+    "avg_nps": 783202,
+    "avg_depth": 5.62,
+    "avg_move_ms": 44.29,
+    "peak_rss_mb": 193.4
+  },
+  "candidate_stats": {
+    "moves": 11787,
+    "avg_nps": 792574,
+    "avg_depth": 5.24,
+    "avg_move_ms": 44.79,
+    "peak_rss_mb": 156.8
+  },
+  "verdict": "No measurable difference: the 95% interval includes zero at this sample size.",
+  "created_at": "2026-10-29T23:05:10+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp024-ablate-check-extension",
+  "meta": {
+    "experiment_id": "exp024-ablate-check-extension",
+    "started_at": "2026-10-29T22:16:47+00:00",
+    "lab_version": "1.0.0",
+    "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+    "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+    "experiment_file": "engine_lab/experiments/exp024-ablate-check-extension.json",
+    "experiment_sha256": "c27aa605c62d175b8de0fc1ad0fb554e50961af7930f0aeb6edc9c1bcf13ebe5",
+    "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+    "hardware": {
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "cpu": "Apple M1",
+      "logical_cpus": 8,
+      "memory_gb": 8.6,
+      "python": "3.12.2",
+      "python_chess": "1.11.2"
+    },
+    "workers": 4,
+    "command": "engine_lab/enginelab/__main__.py run exp024 --fresh",
+    "finished_at": "2026-10-29T22:21:24+00:00"
+  }
+}

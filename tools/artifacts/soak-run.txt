@@ -1,0 +1,8 @@
+
+com.divyanshu.chess.SpectatorSoakRun:.
+
+Time: 217.357
+
+OK (1 test)
+
+

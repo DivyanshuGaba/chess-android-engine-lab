@@ -1,0 +1,45 @@
+{
+  "id": "exp032-vs-stockfish-2600",
+  "title": "Calibration: built-in Hard against Stockfish at UCI_Elo 2600",
+  "description": "The built-in Hard engine (0.3 s per move, the app's setting) against Stockfish limited to 2600 Elo with the same 0.3 s per move. UCI_Elo is calibrated for long time controls, so treat it as a ladder rung, not a rating for the built-in engine.",
+  "hypothesis": "Finds the rung of this ladder where the built-in engine stops winning; no direction assumed.",
+  "engine": "bin/stockfish-macos-universal",
+  "baseline": {
+    "name": "Stockfish 19, UCI_Elo 2600, 0.3 s",
+    "options": {
+      "Threads": 1,
+      "Hash": 16,
+      "UCI_LimitStrength": true,
+      "UCI_Elo": 2600
+    },
+    "limits": {
+      "time": 0.3
+    }
+  },
+  "candidate": {
+    "name": "Built-in Hard (improved engine), 0.3 s",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    },
+    "limits": {
+      "time": 0.3
+    }
+  },
+  "openings": {
+    "source": "random",
+    "seed": 20261029,
+    "count": 100,
+    "plies": 8,
+    "max_abs_cp": 100,
+    "filter_depth": 8
+  },
+  "adjudication": {
+    "cp": 1000,
+    "plies": 6,
+    "max_plies": 400
+  },
+  "workers": 4,
+  "min_pairs_for_conclusion": 50
+}

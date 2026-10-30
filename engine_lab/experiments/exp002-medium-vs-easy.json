@@ -1,0 +1,13 @@
+{
+  "id": "exp002-medium-vs-easy",
+  "title": "App difficulty ladder: Medium against Easy",
+  "description": "The exact Stockfish settings the app uses for its Easy (UCI_Elo 1350, 0.1 s per move) and Medium (UCI_Elo 1800, 0.3 s per move) levels. Tests whether the levels differ in practice.",
+  "hypothesis": "Medium beats Easy; the Elo interval excludes zero.",
+  "engine": "bin/stockfish-macos-universal",
+  "baseline":  {"name": "App Easy (Elo 1350, 0.1 s)", "options": {"Threads": 1, "Hash": 16, "UCI_LimitStrength": true, "UCI_Elo": 1350}, "limits": {"time": 0.1}},
+  "candidate": {"name": "App Medium (Elo 1800, 0.3 s)", "options": {"Threads": 1, "Hash": 16, "UCI_LimitStrength": true, "UCI_Elo": 1800}, "limits": {"time": 0.3}},
+  "openings": {"source": "random", "seed": 20261029, "count": 100, "plies": 8, "max_abs_cp": 100, "filter_depth": 8},
+  "adjudication": {"cp": 1000, "plies": 6, "max_plies": 400},
+  "workers": 3,
+  "min_pairs_for_conclusion": 40
+}

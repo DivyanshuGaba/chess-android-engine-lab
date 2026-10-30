@@ -1,0 +1,115 @@
+{
+  "id": "exp013-advanced-vs-stockfish-easy",
+  "title": "Calibration: improved built-in engine against Stockfish Easy",
+  "description": "Stockfish at the app's Easy level (1350 Elo, 0.1 s) against the improved built-in engine at 0.3 s per move.",
+  "hypothesis": "Measures where the improved engine sits relative to the same Stockfish preset; no direction assumed.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 50,
+  "pairs": 50,
+  "incomplete_pairs": 0,
+  "games": 100,
+  "engine_version": "Stockfish 19",
+  "time_control": "baseline time 0.1 | candidate time 0.3",
+  "baseline": {
+    "name": "Stockfish 19, app Easy (Elo 1350, 0.1 s)",
+    "limits": "time 0.1",
+    "options": {
+      "Threads": 1,
+      "Hash": 16,
+      "UCI_LimitStrength": true,
+      "UCI_Elo": 1350
+    }
+  },
+  "candidate": {
+    "name": "Built-in advanced, 300 ms",
+    "limits": "time 0.3",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    }
+  },
+  "wins": 99,
+  "draws": 0,
+  "losses": 1,
+  "score_pct": 99.0,
+  "elo_diff": 798.3,
+  "elo_ci_low": 607.5,
+  "elo_ci_high": null,
+  "ci_open_ended": true,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 100.0,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 100,
+    "score": 0.99,
+    "elo": 798.3,
+    "low": 606.9,
+    "high": 1600.0,
+    "los": 1.0
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 50,
+    "score": 0.99,
+    "elo": 798.3,
+    "low": 607.5,
+    "high": 1600.0,
+    "los": 1.0
+  },
+  "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 1,
+    "1.5": 0,
+    "2": 49
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "checkmate": 30,
+    "adjudicated_win": 70
+  },
+  "avg_plies": 50.8,
+  "baseline_stats": {
+    "moves": 2544,
+    "avg_nps": 998529,
+    "avg_depth": 18.18,
+    "avg_move_ms": 99.58,
+    "peak_rss_mb": 357.5
+  },
+  "candidate_stats": {
+    "moves": 2533,
+    "avg_nps": 744737,
+    "avg_depth": 5.9,
+    "avg_move_ms": 252.4,
+    "peak_rss_mb": 129.7
+  },
+  "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+  "created_at": "2026-10-29T20:15:50+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp013-advanced-vs-stockfish-easy",
+  "meta": {
+    "experiment_id": "exp013-advanced-vs-stockfish-easy",
+    "started_at": "2026-10-29T20:09:40+00:00",
+    "lab_version": "1.0.0",
+    "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+    "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+    "experiment_file": "engine_lab/experiments/exp013-advanced-vs-stockfish-easy.json",
+    "experiment_sha256": "02ab1daf384b8054e167d3a8c49e264f0e7e59c1e7eaea966a91c26034ec46d1",
+    "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+    "hardware": {
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "cpu": "Apple M1",
+      "logical_cpus": 8,
+      "memory_gb": 8.6,
+      "python": "3.12.2",
+      "python_chess": "1.11.2"
+    },
+    "workers": 4,
+    "command": "engine_lab/enginelab/__main__.py run exp013 --pairs 50 --fresh",
+    "finished_at": "2026-10-29T20:13:37+00:00"
+  }
+}

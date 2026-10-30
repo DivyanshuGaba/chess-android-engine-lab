@@ -1,0 +1,13 @@
+{
+  "id": "exp001-doubled-nodes",
+  "title": "Positive control: twice the search effort",
+  "description": "The candidate searches 20,000 nodes per move against the baseline's 10,000. More search is known to help, so the harness should detect a clear advantage. This proves that the framework can see a real difference.",
+  "hypothesis": "The candidate scores clearly above 50% and the Elo interval excludes zero.",
+  "engine": "bin/stockfish-macos-universal",
+  "baseline":  {"name": "Stockfish 19, 10k nodes", "options": {"Threads": 1, "Hash": 16}, "limits": {"nodes": 10000}},
+  "candidate": {"name": "Stockfish 19, 20k nodes", "options": {"Threads": 1, "Hash": 16}, "limits": {"nodes": 20000}},
+  "openings": {"source": "random", "seed": 20261029, "count": 100, "plies": 8, "max_abs_cp": 100, "filter_depth": 8},
+  "adjudication": {"cp": 1000, "plies": 6, "max_plies": 400},
+  "workers": 4,
+  "min_pairs_for_conclusion": 100
+}

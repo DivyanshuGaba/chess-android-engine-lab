@@ -1,0 +1,1504 @@
+{
+ "openings": [
+  {
+   "id": "rnd-20261029-0000",
+   "fen": "r1bqkbnr/1pppppp1/p6p/n7/P5P1/2N2P2/1PPPP2P/R1BQKBNR w KQkq - 1 5",
+   "moves": [
+    "g2g4",
+    "b8c6",
+    "f2f3",
+    "h7h6",
+    "b1c3",
+    "a7a6",
+    "a2a4",
+    "c6a5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0001",
+   "fen": "rnbqkb1r/ppppppp1/8/3n3p/3P2P1/2P1B3/PP2PP1P/RN1QKBNR w KQkq - 1 5",
+   "moves": [
+    "d2d4",
+    "h7h6",
+    "c1e3",
+    "h6h5",
+    "c2c3",
+    "g8f6",
+    "g2g4",
+    "f6d5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0002",
+   "fen": "rnb1kbnr/pppqpppp/8/3p4/2P5/5P2/PPQPP1PP/RNB1KBNR w KQkq - 5 5",
+   "moves": [
+    "f2f3",
+    "d7d5",
+    "c2c4",
+    "d8d7",
+    "d1b3",
+    "d7d8",
+    "b3c2",
+    "d8d7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0003",
+   "fen": "r1bq1bnr/ppppkp1p/2n3p1/4p3/8/2PP1P2/PPQ1P1PP/RNB1KBNR w KQ - 0 5",
+   "moves": [
+    "f2f3",
+    "e7e5",
+    "c2c3",
+    "b8c6",
+    "d1c2",
+    "e8e7",
+    "d2d3",
+    "g7g6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0004",
+   "fen": "r1bqkbnr/p2npppp/8/1ppp4/4PP2/P7/1PPP2PP/RNBQKBNR w KQkq - 0 5",
+   "moves": [
+    "e2e3",
+    "d7d5",
+    "f2f4",
+    "c7c5",
+    "a2a3",
+    "b8d7",
+    "e3e4",
+    "b7b5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0005",
+   "fen": "r1bqkbnr/ppppp1pp/2n2p2/8/8/P5PP/1PPPPP1R/RNBQKBN1 w Qkq - 1 5",
+   "moves": [
+    "a2a3",
+    "b8c6",
+    "h2h3",
+    "c6b8",
+    "h1h2",
+    "f7f6",
+    "g2g3",
+    "b8c6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0006",
+   "fen": "rnbqkb1r/1pp2ppp/p2ppn2/8/1PP3P1/5N2/P2PPP1P/RNBQKB1R w KQkq - 2 5",
+   "moves": [
+    "c2c4",
+    "e7e6",
+    "b2b4",
+    "a7a6",
+    "g2g4",
+    "d7d6",
+    "g1f3",
+    "g8f6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0007",
+   "fen": "rnbqkbnr/pp1ppppp/2p5/8/P5P1/1P5P/2PPPP2/RNBQKBNR w KQkq - 1 5",
+   "moves": [
+    "b2b3",
+    "c7c6",
+    "h2h3",
+    "d8c7",
+    "a2a4",
+    "c7a5",
+    "g2g4",
+    "a5d8"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0008",
+   "fen": "1nbqkb1r/1pppp1pp/r6n/p4p2/PP3P2/8/2PPP1PP/RNBQKBNR w KQk - 1 5",
+   "moves": [
+    "f2f3",
+    "g8h6",
+    "a2a4",
+    "f7f5",
+    "f3f4",
+    "a7a5",
+    "b2b4",
+    "a8a6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0009",
+   "fen": "rnb1kbnr/ppq1pp1p/3p2p1/2p5/3P1P2/2N4P/PPP1P1P1/R1BQKBNR w KQkq - 1 5",
+   "moves": [
+    "f2f4",
+    "c7c5",
+    "b1c3",
+    "d7d6",
+    "d2d4",
+    "g7g6",
+    "h2h3",
+    "d8c7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0010",
+   "fen": "rnbqk1nr/pppp1p2/3b2p1/4p2p/1P5P/5N2/P1PPPPPR/RNBQKB2 w Qkq - 0 5",
+   "moves": [
+    "b2b4",
+    "e7e5",
+    "g1f3",
+    "f8d6",
+    "h2h4",
+    "g7g6",
+    "h1h2",
+    "h7h5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0011",
+   "fen": "rnbqkbn1/pp2pppr/2pp4/7p/7P/1P3N1R/P1PPPPP1/RNBQKB2 w Qq - 0 5",
+   "moves": [
+    "b2b3",
+    "d7d6",
+    "g1f3",
+    "h7h5",
+    "h2h4",
+    "h8h7",
+    "h1h3",
+    "c7c6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0012",
+   "fen": "r1bqkbnr/pppppp2/7p/6p1/1nP2N2/8/P2PPPPP/RNBQKB1R w KQkq - 0 5",
+   "moves": [
+    "b2b4",
+    "b8a6",
+    "c2c4",
+    "h7h6",
+    "g1h3",
+    "g7g5",
+    "h3f4",
+    "a6b4"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0013",
+   "fen": "r2qkbnr/pbpppppp/n7/8/1p4P1/5P1N/PPPPP2P/RNBQKBR1 w Qkq - 0 5",
+   "moves": [
+    "g2g4",
+    "b8a6",
+    "f2f3",
+    "b7b5",
+    "g1h3",
+    "c8b7",
+    "h1g1",
+    "b5b4"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0014",
+   "fen": "r1bqkbnr/p2p1ppp/n3p3/1pp5/1P6/5P2/PBPPP1PP/RN1QKBNR w KQkq - 0 5",
+   "moves": [
+    "b2b3",
+    "b7b5",
+    "c1b2",
+    "e7e6",
+    "b3b4",
+    "b8a6",
+    "f2f3",
+    "c7c5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0015",
+   "fen": "rnbqkb1r/1pppp2p/6pn/p4p2/2P5/5NP1/PPQPPP1P/RNB1KB1R w KQkq - 0 5",
+   "moves": [
+    "g2g3",
+    "g7g6",
+    "g1f3",
+    "a7a5",
+    "c2c4",
+    "g8h6",
+    "d1c2",
+    "f7f5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0016",
+   "fen": "r1bqk1nr/pp1pppbp/n1p3p1/8/1PPP4/2N5/P3PPPP/R1BQKBNR w KQkq - 1 5",
+   "moves": [
+    "c2c4",
+    "b8a6",
+    "d2d4",
+    "c7c6",
+    "b1c3",
+    "g7g6",
+    "b2b4",
+    "f8g7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0017",
+   "fen": "r1bqkbnr/1ppp2pp/n3pp2/p7/5P2/N3P2P/PPPP2P1/R1BQKBNR w KQkq - 1 5",
+   "moves": [
+    "e2e3",
+    "e7e6",
+    "f2f4",
+    "a7a5",
+    "b1a3",
+    "f7f6",
+    "h2h3",
+    "b8a6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0018",
+   "fen": "r1bqkbnr/1pp1pppp/p2p4/8/PP1n4/3P3P/2P1PPP1/RNBQKBNR w KQkq - 1 5",
+   "moves": [
+    "b2b4",
+    "b8c6",
+    "h2h3",
+    "d7d6",
+    "a2a4",
+    "a7a6",
+    "d2d3",
+    "c6d4"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0019",
+   "fen": "rnbqkbnr/1ppppp1p/8/p5B1/2P4P/3P2p1/PP2PPP1/RN1QKBNR w KQkq - 0 5",
+   "moves": [
+    "c2c4",
+    "g7g5",
+    "h2h4",
+    "g5g4",
+    "d2d3",
+    "a7a5",
+    "c1g5",
+    "g4g3"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0020",
+   "fen": "rnbqkbnr/1pppppp1/7p/p7/3P4/7N/PPPKPPPP/RNBQ1BR1 w k - 2 5",
+   "moves": [
+    "g1h3",
+    "a7a5",
+    "h1g1",
+    "a8a7",
+    "d2d4",
+    "h7h6",
+    "e1d2",
+    "a7a8"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0021",
+   "fen": "rnbqkbnr/1p1p1p1p/4p1p1/p1p5/4P3/7N/PPPP1PPP/RNBQKB1R w KQkq - 0 5",
+   "moves": [
+    "g1f3",
+    "a7a5",
+    "f3g1",
+    "e7e6",
+    "g1h3",
+    "c7c5",
+    "e2e4",
+    "g7g6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0022",
+   "fen": "1rbqkbnr/pppp1pp1/n3p3/7p/1P6/7P/P1PPPPPR/RNBQKBN1 w Qk - 1 5",
+   "moves": [
+    "b2b3",
+    "b8a6",
+    "h2h3",
+    "h7h5",
+    "h1h2",
+    "e7e6",
+    "b3b4",
+    "a8b8"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0023",
+   "fen": "rnbq1bnr/pppp1kp1/4pp1p/8/1P6/B4P1N/P1PPP1PP/RN1QKB1R w KQ - 2 5",
+   "moves": [
+    "f2f3",
+    "e7e6",
+    "g1h3",
+    "f7f6",
+    "b2b4",
+    "h7h6",
+    "c1a3",
+    "e8f7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0024",
+   "fen": "rnbqkbnr/2pp1pp1/8/ppP1p2p/P7/3P4/1P2PPPP/RNBQKBNR w KQkq - 0 5",
+   "moves": [
+    "c2c4",
+    "a7a5",
+    "a2a4",
+    "b7b5",
+    "c4c5",
+    "e7e5",
+    "d2d3",
+    "h7h5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0025",
+   "fen": "rnbqkbnr/pp1pp2p/5p2/6p1/1p6/3P4/P1P1PPPP/RNBQKBNR w kq - 0 5",
+   "moves": [
+    "b2b4",
+    "c7c5",
+    "d2d3",
+    "g7g5",
+    "e1d2",
+    "f7f6",
+    "d2e1",
+    "c5b4"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0026",
+   "fen": "rnbqk1nr/1pp1ppbp/3p2p1/p7/7P/2PP4/PP2PPPR/RNBQKBN1 w Qkq - 0 5",
+   "moves": [
+    "c2c3",
+    "d7d6",
+    "h2h4",
+    "g7g6",
+    "h1h2",
+    "f8g7",
+    "d2d3",
+    "a7a5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0027",
+   "fen": "r1bqkbnr/pppppp2/n7/6p1/P1P1P2p/5P2/1P1P2PP/RNBQKBNR w KQkq - 0 5",
+   "moves": [
+    "e2e4",
+    "h7h5",
+    "f2f3",
+    "b8a6",
+    "c2c4",
+    "h5h4",
+    "a2a4",
+    "g7g5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0028",
+   "fen": "rnb1kbnr/1pppq1pp/4pp2/pP6/8/N6P/P1PPPPP1/R1BQKBNR w KQkq a6 0 5",
+   "moves": [
+    "b2b4",
+    "f7f6",
+    "b1a3",
+    "e7e6",
+    "h2h3",
+    "d8e7",
+    "b4b5",
+    "a7a5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0029",
+   "fen": "rnbqkb1r/pppp1p2/5np1/4p1Np/5P2/P7/1PPPP1PP/RNBQKB1R w KQkq - 0 5",
+   "moves": [
+    "a2a3",
+    "g8f6",
+    "g1h3",
+    "e7e5",
+    "f2f4",
+    "h7h5",
+    "h3g5",
+    "g7g6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0030",
+   "fen": "rnbqkbnr/1p2p1pp/p1p2p2/3p4/Q1P4N/8/PP1PPPPP/RNB1KB1R w KQkq - 0 5",
+   "moves": [
+    "c2c4",
+    "c7c6",
+    "d1a4",
+    "a7a6",
+    "g1f3",
+    "f7f6",
+    "f3h4",
+    "d7d5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0031",
+   "fen": "rnq1kbnr/pbpppppp/8/8/Pp6/7N/1PPPPPPP/RNBQKBR1 w Qkq - 0 5",
+   "moves": [
+    "g1h3",
+    "b7b5",
+    "a2a3",
+    "c8b7",
+    "a3a4",
+    "d8c8",
+    "h1g1",
+    "b5b4"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0032",
+   "fen": "rnbqkbnr/3ppp1p/1p4p1/p1p5/2P3P1/P2P4/1P2PP1P/RNBQKBNR w KQkq - 0 5",
+   "moves": [
+    "c2c4",
+    "a7a5",
+    "a2a3",
+    "c7c5",
+    "g2g4",
+    "b7b6",
+    "d2d3",
+    "g7g6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0033",
+   "fen": "r1bqkbn1/pppppp1r/2n4p/5Pp1/8/2PP4/PP2P1PP/RNBQKBNR w KQq - 1 5",
+   "moves": [
+    "f2f4",
+    "h7h6",
+    "d2d3",
+    "g7g5",
+    "c2c3",
+    "b8c6",
+    "f4f5",
+    "h8h7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0034",
+   "fen": "r1bqkbnr/pppppp2/2n5/7p/P5p1/1PN3P1/2PPPP1P/R1BQKBNR w KQkq - 2 5",
+   "moves": [
+    "b2b3",
+    "g7g5",
+    "g2g3",
+    "h7h5",
+    "a2a4",
+    "g5g4",
+    "b1c3",
+    "b8c6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0035",
+   "fen": "r1bqkb1r/pppp1p1p/2n2n2/4p1N1/1P6/2P5/P2PPPPP/RNBQKB1R w KQkq - 1 5",
+   "moves": [
+    "g1f3",
+    "g7g5",
+    "c2c3",
+    "b8c6",
+    "b2b4",
+    "e7e5",
+    "f3g5",
+    "g8f6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0036",
+   "fen": "r1bqkb1r/ppp1pppp/3p3n/8/1n6/2N2P1N/PPPPPKPP/R1BQ1B1R w kq - 0 5",
+   "moves": [
+    "f2f3",
+    "b8c6",
+    "g1h3",
+    "c6b4",
+    "b1c3",
+    "g8h6",
+    "e1f2",
+    "d7d6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0037",
+   "fen": "rnb1kbnr/ppq1p1pp/2pp1p2/8/8/2N3PN/PPPPPP1P/1RBQKB1R w Kkq - 2 5",
+   "moves": [
+    "g2g3",
+    "f7f6",
+    "b1c3",
+    "d7d6",
+    "g1h3",
+    "c7c6",
+    "a1b1",
+    "d8c7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0038",
+   "fen": "rnbqkb1r/p1p1pp1p/1p4pn/3p4/5P2/1P1BP3/P1PP2PP/RNBQK1NR w KQkq - 0 5",
+   "moves": [
+    "e2e3",
+    "g7g6",
+    "f2f4",
+    "g8h6",
+    "f1d3",
+    "d7d5",
+    "b2b3",
+    "b7b6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0039",
+   "fen": "r1bqk1nr/ppp1pp1p/n5pb/3p2N1/8/1P3P2/P1PPP1PP/RNBQKB1R w KQkq - 0 5",
+   "moves": [
+    "g1h3",
+    "b8a6",
+    "b2b3",
+    "g7g6",
+    "h3g5",
+    "f8h6",
+    "f2f3",
+    "d7d5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0040",
+   "fen": "1nbqkb1r/rppp1ppp/7n/P3p3/7P/P7/2PPPPP1/RNBQKBNR w KQk - 1 5",
+   "moves": [
+    "a2a3",
+    "a7a5",
+    "b2b4",
+    "g8h6",
+    "b4a5",
+    "e7e5",
+    "h2h4",
+    "a8a7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0041",
+   "fen": "rnbqkb1r/2p1pppp/1p1p3n/p7/3P4/2P5/PP1NPPPP/1RBQKBNR w Kkq - 0 5",
+   "moves": [
+    "d2d4",
+    "a7a5",
+    "b1d2",
+    "g8h6",
+    "c2c3",
+    "b7b6",
+    "a1b1",
+    "d7d6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0042",
+   "fen": "rnbq1knr/p1ppppbp/1p4p1/8/2P3P1/3P1N2/PP2PP1P/RNBQKB1R w KQ - 1 5",
+   "moves": [
+    "g1f3",
+    "b7b6",
+    "c2c4",
+    "g7g6",
+    "g2g4",
+    "f8g7",
+    "d2d3",
+    "e8f8"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0043",
+   "fen": "rnbqkbnr/ppp2pp1/7p/3pp3/3P4/5P2/PPPBP1PP/RNQ1KBNR w KQkq - 0 5",
+   "moves": [
+    "f2f3",
+    "h7h6",
+    "d2d4",
+    "d7d5",
+    "c1d2",
+    "e7e6",
+    "d1c1",
+    "e6e5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0044",
+   "fen": "r1bqkbnr/1pppp1pp/B4p2/p3n3/4P3/1P6/P1PP1PPP/RNBQ1KNR w kq - 2 5",
+   "moves": [
+    "b2b3",
+    "a7a5",
+    "e2e4",
+    "b8c6",
+    "f1a6",
+    "f7f6",
+    "e1f1",
+    "c6e5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0045",
+   "fen": "rnbqkb1r/2pp1ppp/p4n2/1p2p1N1/2P5/3P4/PP2PPPP/RNBQKB1R w KQkq - 1 5",
+   "moves": [
+    "d2d3",
+    "b7b5",
+    "g1h3",
+    "e7e5",
+    "h3g5",
+    "a7a6",
+    "c2c4",
+    "g8f6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0046",
+   "fen": "rnbqk1nr/pp1p1ppp/2pb4/4p3/P6P/2N5/1PPPPPPR/R1BQKBN1 w Qkq - 0 5",
+   "moves": [
+    "h2h4",
+    "e7e6",
+    "h1h2",
+    "e6e5",
+    "b1c3",
+    "f8d6",
+    "a2a4",
+    "c7c6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0047",
+   "fen": "rnbqkb1r/p1p1p1pp/1p5n/3p1p2/5PQ1/2N1P3/PPPP2PP/R1B1KBNR w KQkq - 1 5",
+   "moves": [
+    "e2e3",
+    "b7b6",
+    "b1c3",
+    "f7f5",
+    "d1g4",
+    "d7d5",
+    "f2f4",
+    "g8h6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0048",
+   "fen": "rnbqkbnr/pppppp2/6pp/8/6Q1/N3P2P/PPPP1PP1/R1B1KBNR w KQkq - 0 5",
+   "moves": [
+    "h2h3",
+    "b8a6",
+    "e2e3",
+    "g7g6",
+    "b1a3",
+    "a6b8",
+    "d1g4",
+    "h7h6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0049",
+   "fen": "rnbqkbr1/pppp2pp/4pp1n/8/1P4P1/2P4P/P2PPP2/RNBQKBNR w KQq - 1 5",
+   "moves": [
+    "h2h3",
+    "f7f6",
+    "c2c3",
+    "e7e6",
+    "b2b4",
+    "g8h6",
+    "g2g4",
+    "h8g8"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0050",
+   "fen": "rnb1kbnr/pp1q1ppp/2ppp3/1B6/4P3/P6N/1PPP1PPP/RNBQK2R w KQkq - 0 5",
+   "moves": [
+    "a2a3",
+    "d7d6",
+    "e2e4",
+    "e7e6",
+    "f1b5",
+    "d8d7",
+    "g1h3",
+    "c7c6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0051",
+   "fen": "1rb1kbnr/pppqpppp/2np4/8/1P2PP1P/8/P1PP2P1/RNBQKBNR w KQk - 1 5",
+   "moves": [
+    "h2h4",
+    "d7d6",
+    "f2f4",
+    "b8c6",
+    "b2b4",
+    "a8b8",
+    "e2e4",
+    "d8d7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0052",
+   "fen": "rnbqkbr1/pp1ppppp/8/2p5/4n3/1PP2N2/P2P1PPP/RNBQKB1R w KQq - 2 5",
+   "moves": [
+    "e2e4",
+    "g8f6",
+    "b2b3",
+    "c7c5",
+    "c2c3",
+    "f6e4",
+    "g1f3",
+    "h8g8"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0053",
+   "fen": "rnbqkb1r/1pppp1pp/5p2/p6n/3N4/7P/PPPPPPPR/RNBQKB2 w Qkq - 0 5",
+   "moves": [
+    "g1f3",
+    "g8f6",
+    "h2h3",
+    "f6h5",
+    "h1h2",
+    "f7f6",
+    "f3d4",
+    "a7a5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0054",
+   "fen": "r1b1kbnr/pppp1ppp/n7/4pq2/8/P4P2/1PPPP1PP/RNBQKBNR w KQkq - 1 5",
+   "moves": [
+    "b1c3",
+    "b8a6",
+    "c3b1",
+    "e7e5",
+    "f2f3",
+    "d8f6",
+    "a2a3",
+    "f6f5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0055",
+   "fen": "rnbqk1nr/pp1pbpp1/2p1p3/7p/3PP3/5P2/PPPB2PP/RN1QKBNR w KQkq - 0 5",
+   "moves": [
+    "d2d4",
+    "e7e6",
+    "e2e4",
+    "c7c6",
+    "c1d2",
+    "f8e7",
+    "f2f3",
+    "h7h5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0056",
+   "fen": "rn1qkb1r/p2ppppp/bp5n/2p5/2P3P1/1Q5B/PP1PPP1P/RNB1K1NR w KQkq - 2 5",
+   "moves": [
+    "g2g4",
+    "c7c5",
+    "c2c4",
+    "g8h6",
+    "f1h3",
+    "b7b6",
+    "d1b3",
+    "c8a6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0057",
+   "fen": "rnb1kbnr/pp1p1p1p/1q2p3/2p3p1/2P5/3P4/PP2PPPP/RNBQKBNR w kq - 2 5",
+   "moves": [
+    "d2d3",
+    "g7g5",
+    "e1d2",
+    "e7e6",
+    "c2c4",
+    "c7c5",
+    "d2e1",
+    "d8b6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0058",
+   "fen": "rnb1kb1r/ppp1pp1p/3q2pn/3p4/1P4P1/2N4P/P1PPPP2/R1BQKBNR w KQkq - 1 5",
+   "moves": [
+    "h2h3",
+    "g8h6",
+    "b2b4",
+    "g7g6",
+    "b1c3",
+    "d7d5",
+    "g2g4",
+    "d8d6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0059",
+   "fen": "rn1qkbnr/p1p1pp1p/3pb3/1p4p1/1P6/N4P1P/P1PPP1P1/R1BQKBNR w KQkq - 0 5",
+   "moves": [
+    "h2h3",
+    "b7b5",
+    "b2b4",
+    "d7d6",
+    "f2f3",
+    "c8e6",
+    "b1a3",
+    "g7g5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0060",
+   "fen": "rnb1kb1r/pppp1ppp/6qn/4p3/4P3/PQ6/1PPP1PPP/RNB1KBNR w KQkq - 3 5",
+   "moves": [
+    "e2e4",
+    "e7e5",
+    "d1f3",
+    "g8h6",
+    "a2a3",
+    "d8g5",
+    "f3b3",
+    "g5g6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0061",
+   "fen": "rn1qkbnr/pbp1pp1p/1p1p4/6p1/5P2/2P5/PP1PP1PP/RNBQKBNR w KQkq - 2 5",
+   "moves": [
+    "f2f4",
+    "b7b6",
+    "b1a3",
+    "d7d6",
+    "c2c3",
+    "g7g5",
+    "a3b1",
+    "c8b7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0062",
+   "fen": "rnbqkbn1/pp1p1ppr/2p4p/P3p3/8/2N4N/1PPPPPPP/R1BQKB1R w KQq - 0 5",
+   "moves": [
+    "g1h3",
+    "h7h6",
+    "b1c3",
+    "c7c6",
+    "a2a4",
+    "h8h7",
+    "a4a5",
+    "e7e5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0063",
+   "fen": "r1bqkb1r/p1ppp1pp/np5n/3P1p2/8/7N/PPPQPPPP/RNB1KB1R w KQkq - 0 5",
+   "moves": [
+    "d2d4",
+    "g8h6",
+    "d4d5",
+    "b8a6",
+    "d1d2",
+    "b7b6",
+    "g1h3",
+    "f7f5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0064",
+   "fen": "rn1qkbnr/pp1bppp1/3p3p/2p5/5P2/3P4/PPP1P1PP/RNBQKBNR w KQkq - 0 5",
+   "moves": [
+    "f2f4",
+    "d7d6",
+    "d2d3",
+    "c8d7",
+    "g1h3",
+    "c7c5",
+    "h3g1",
+    "h7h6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0065",
+   "fen": "rnbqkb1r/1ppnpppp/3p4/p7/4P3/NPP5/P2P1PPP/R1BQKBNR w KQkq - 0 5",
+   "moves": [
+    "b1a3",
+    "g8f6",
+    "c2c3",
+    "d7d6",
+    "b2b3",
+    "f6d7",
+    "e2e4",
+    "a7a5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0066",
+   "fen": "rnb1kbnr/ppq1ppp1/2p4p/3B4/6P1/4P3/PPPP1P1P/RNBQK1NR w KQkq - 1 5",
+   "moves": [
+    "e2e3",
+    "h7h6",
+    "f1c4",
+    "c7c6",
+    "g2g4",
+    "d7d5",
+    "c4d5",
+    "d8c7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0067",
+   "fen": "r1bqkbn1/pppppppr/8/7p/1P1n4/N4P2/P1PPPKPP/R1BQ1BNR w q - 4 5",
+   "moves": [
+    "f2f3",
+    "b8c6",
+    "b2b4",
+    "h7h5",
+    "b1a3",
+    "h8h7",
+    "e1f2",
+    "c6d4"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0068",
+   "fen": "rnbqk1nr/p1pp1p1p/1p1bp1p1/1P6/8/8/P1PPPPPP/RNBQKBNR w KQkq - 0 5",
+   "moves": [
+    "b2b4",
+    "g7g6",
+    "b4b5",
+    "e7e6",
+    "b1c3",
+    "f8d6",
+    "c3b1",
+    "b7b6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0069",
+   "fen": "rnbqk1nr/1pppppb1/p5p1/7p/P2P2P1/8/RPP1PP1P/1NBQKBNR w Kkq - 1 5",
+   "moves": [
+    "g2g4",
+    "a7a6",
+    "a2a4",
+    "g7g6",
+    "a1a2",
+    "h7h5",
+    "d2d4",
+    "f8g7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0070",
+   "fen": "r1bqkbnr/1p1ppppp/2p5/p7/1n3P1P/N5P1/PPPPP3/R1BQKBNR w KQkq - 1 5",
+   "moves": [
+    "f2f4",
+    "c7c6",
+    "h2h4",
+    "a7a5",
+    "b1a3",
+    "b8a6",
+    "g2g3",
+    "a6b4"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0071",
+   "fen": "rnbqkb1r/2pppp1p/6pn/pp6/2P2P2/4P2N/PP1P2PP/RNBQKB1R w KQkq - 0 5",
+   "moves": [
+    "c2c4",
+    "b7b5",
+    "f2f4",
+    "g8h6",
+    "g1h3",
+    "a7a5",
+    "e2e3",
+    "g7g6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0072",
+   "fen": "rnbqkbnr/1pp3pp/p3p3/3p1p2/5P1P/1P6/P1PPP1P1/RNBQKBNR w KQkq - 0 5",
+   "moves": [
+    "b2b3",
+    "a7a6",
+    "h2h3",
+    "f7f5",
+    "h3h4",
+    "d7d5",
+    "f2f4",
+    "e7e6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0073",
+   "fen": "rn1qkb1r/pbp1pppp/1p1p3n/1P6/8/P5P1/2PPPP1P/RNBQKBNR w KQkq - 0 5",
+   "moves": [
+    "b2b4",
+    "b7b6",
+    "b4b5",
+    "c8b7",
+    "g2g3",
+    "g8h6",
+    "a2a3",
+    "d7d6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0074",
+   "fen": "r1bqkbnr/2pnpppp/pp6/3p4/1P6/2P3PB/P2PPP1P/RNBQK1NR w KQkq - 0 5",
+   "moves": [
+    "b2b4",
+    "d7d5",
+    "c2c3",
+    "a7a6",
+    "g2g3",
+    "b8d7",
+    "f1h3",
+    "b7b6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0075",
+   "fen": "r1b1kbnr/pp1p1ppp/2n1pq2/P1p5/8/3P3N/1PP1PPPP/RNBQKB1R w KQkq - 3 5",
+   "moves": [
+    "a2a4",
+    "c7c5",
+    "a4a5",
+    "e7e6",
+    "d2d3",
+    "d8f6",
+    "g1h3",
+    "b8c6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0076",
+   "fen": "r1b1kbnr/ppppqp1p/2n3p1/4p3/4P1P1/3P3N/PPP2P1P/RNBQKB1R w KQkq - 0 5",
+   "moves": [
+    "g1h3",
+    "e7e5",
+    "d2d3",
+    "d8e7",
+    "e2e4",
+    "b8c6",
+    "g2g4",
+    "g7g6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0077",
+   "fen": "rnbqkb1r/1ppppppp/p6n/8/3P4/P6P/1PP1PPPR/RNBQKBN1 w Qkq - 1 5",
+   "moves": [
+    "h2h3",
+    "a7a6",
+    "d2d4",
+    "g8h6",
+    "h1h2",
+    "h6g4",
+    "a2a3",
+    "g4h6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0078",
+   "fen": "rnbqkbnr/1p1ppp2/2p4p/p5p1/1P3P2/2NP4/P1P1P1PP/R1BQKBNR w KQkq - 0 5",
+   "moves": [
+    "b1c3",
+    "c7c6",
+    "d2d3",
+    "a7a5",
+    "f2f4",
+    "h7h6",
+    "b2b4",
+    "g7g5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0079",
+   "fen": "r1bqkbnr/pp1p1pp1/n3p2p/2p5/5P1N/6P1/PPPPP2P/RNBQKB1R w KQkq - 0 5",
+   "moves": [
+    "g1f3",
+    "e7e6",
+    "f3h4",
+    "c7c5",
+    "f2f4",
+    "b8a6",
+    "g2g3",
+    "h7h6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0080",
+   "fen": "r1bqkbnr/pp3ppp/n1p1p3/3p4/8/2P2N1P/PP1PPPPR/RNBQKB2 w Qkq - 0 5",
+   "moves": [
+    "h2h3",
+    "e7e6",
+    "c2c3",
+    "b8a6",
+    "h1h2",
+    "c7c6",
+    "g1f3",
+    "d7d5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0081",
+   "fen": "rnbqkbnr/p2pp1pp/1p6/2p5/5p1P/2R4N/PPPPPPP1/RNBQKB2 w Qkq - 0 5",
+   "moves": [
+    "h2h4",
+    "f7f5",
+    "h1h3",
+    "b7b6",
+    "h3c3",
+    "f5f4",
+    "g1h3",
+    "c7c5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0082",
+   "fen": "rnb1kb1r/1pqppppp/7n/p1p5/2P3P1/3P3B/PP2PP1P/RNBQK1NR w KQkq - 3 5",
+   "moves": [
+    "d2d3",
+    "a7a5",
+    "c2c4",
+    "c7c5",
+    "g2g4",
+    "g8h6",
+    "f1h3",
+    "d8c7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0083",
+   "fen": "r1bqkbnr/pp1pp2p/n4pp1/2p5/1P6/6PN/PBPPPP1P/RN1QKB1R w KQkq - 0 5",
+   "moves": [
+    "b2b4",
+    "g7g6",
+    "g2g3",
+    "b8a6",
+    "c1b2",
+    "f7f6",
+    "g1h3",
+    "c7c5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0084",
+   "fen": "rnbqkb1r/p1pppppp/1p6/8/1n5N/7P/PPPPPPPR/RNBQKB2 w Qkq - 0 5",
+   "moves": [
+    "h2h3",
+    "g8f6",
+    "g1f3",
+    "f6d5",
+    "f3h4",
+    "d5b4",
+    "h1h2",
+    "b7b6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0085",
+   "fen": "rnb1kbnr/pppqpppp/3p4/8/2P5/3P1P1N/PP2P1PP/RNBQKB1R w KQkq - 1 5",
+   "moves": [
+    "c2c4",
+    "d7d6",
+    "g1h3",
+    "c8f5",
+    "f2f3",
+    "f5c8",
+    "d2d3",
+    "d8d7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0086",
+   "fen": "rnbqkbr1/p1pppp1p/1p3np1/1N6/8/7P/PPPPPPP1/1RBQKBNR w Kq - 0 5",
+   "moves": [
+    "b1a3",
+    "g8f6",
+    "a1b1",
+    "h8g8",
+    "h2h3",
+    "g7g6",
+    "a3b5",
+    "b7b6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0087",
+   "fen": "r1bqkb1r/pppp1ppp/2n5/4p1P1/4n3/N4N2/PPPPPP1P/R1BQKB1R w KQkq - 1 5",
+   "moves": [
+    "b1a3",
+    "b8c6",
+    "g2g4",
+    "e7e5",
+    "g1f3",
+    "g8f6",
+    "g4g5",
+    "f6e4"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0088",
+   "fen": "r1bqkb1r/ppp1p1pp/n6n/3p1p2/8/4P3/PPPPKPPP/RNBQ1BNR w kq - 0 5",
+   "moves": [
+    "e2e3",
+    "b8a6",
+    "d1g4",
+    "g8h6",
+    "g4d1",
+    "d7d5",
+    "e1e2",
+    "f7f5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0089",
+   "fen": "rn1qkbnr/p1p1pppp/1p1p2b1/8/6P1/1P1P1P2/P1P1P2P/RNBQKBNR w KQkq - 1 5",
+   "moves": [
+    "d2d3",
+    "b7b6",
+    "f2f3",
+    "d7d6",
+    "g2g4",
+    "c8f5",
+    "b2b3",
+    "f5g6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0090",
+   "fen": "r1b1kbnr/p1p1pppp/n2q4/1p1p4/7P/2P1PQ2/PP1P1PP1/RNB1KBNR w KQkq - 1 5",
+   "moves": [
+    "e2e3",
+    "d7d5",
+    "d1f3",
+    "b7b5",
+    "h2h4",
+    "d8d6",
+    "c2c3",
+    "b8a6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0091",
+   "fen": "r1bqkbnr/nppp1ppp/4p3/p6P/6P1/N7/PPPPPP2/R1BQKBNR w KQkq - 0 5",
+   "moves": [
+    "h2h4",
+    "a7a5",
+    "g2g4",
+    "b8c6",
+    "b1a3",
+    "c6a7",
+    "h4h5",
+    "e7e6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0092",
+   "fen": "rnbq1bnr/pppk1ppp/4p2B/3p4/8/3P1P1P/PPP1P1P1/RN1QKBNR w KQ - 0 5",
+   "moves": [
+    "d2d3",
+    "d7d6",
+    "f2f3",
+    "e8d7",
+    "c1h6",
+    "d6d5",
+    "h2h3",
+    "e7e6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0093",
+   "fen": "rnbqkb1r/pp2pppp/7n/2pp4/4PPP1/8/PPPPN2P/RNBQKB1R w KQkq - 0 5",
+   "moves": [
+    "g2g4",
+    "d7d6",
+    "e2e4",
+    "g8h6",
+    "g1e2",
+    "c7c5",
+    "f2f4",
+    "d6d5"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0094",
+   "fen": "rnb1k1nr/pppp1ppp/3bq3/4p3/2P5/5PPP/PP1PP3/RNBQKBNR w KQkq - 1 5",
+   "moves": [
+    "c2c4",
+    "e7e5",
+    "h2h3",
+    "d8f6",
+    "g2g3",
+    "f6e6",
+    "f2f3",
+    "f8d6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0095",
+   "fen": "r1b1kbnr/pppn1ppp/5q2/3pp3/4PP2/1P6/P1PPN1PP/RNBQKB1R w KQkq - 3 5",
+   "moves": [
+    "e2e4",
+    "d7d5",
+    "f2f4",
+    "e7e5",
+    "b2b3",
+    "d8f6",
+    "g1e2",
+    "b8d7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0096",
+   "fen": "rnbqkb1r/p2p1ppp/1p2p2n/2p5/8/NP6/PBPPPPPP/1R1QKBNR w Kkq - 0 5",
+   "moves": [
+    "b2b3",
+    "b7b6",
+    "b1a3",
+    "c7c5",
+    "a1b1",
+    "g8h6",
+    "c1b2",
+    "e7e6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0097",
+   "fen": "r1bqkbn1/pppnpppr/7p/2Pp4/8/3P1N2/PP2PPPP/RNBQKB1R w KQq - 1 5",
+   "moves": [
+    "c2c4",
+    "d7d5",
+    "g1f3",
+    "h7h6",
+    "c4c5",
+    "b8d7",
+    "d2d3",
+    "h8h7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0098",
+   "fen": "r1bqk1nr/pp1p1ppp/n1pb4/4p3/4P3/1P6/P1PP1PPP/RNBQKBNR w KQkq - 3 5",
+   "moves": [
+    "e2e4",
+    "c7c6",
+    "f1e2",
+    "e7e5",
+    "b2b3",
+    "b8a6",
+    "e2f1",
+    "f8d6"
+   ],
+   "source": "random seed=20261029 plies=8"
+  },
+  {
+   "id": "rnd-20261029-0099",
+   "fen": "r1bq1bnr/p1ppkppp/np2p3/8/1P6/2N2P2/P1PPP1PP/1RBQKBNR w K - 3 5",
+   "moves": [
+    "b1c3",
+    "e7e6",
+    "b2b4",
+    "b7b6",
+    "f2f3",
+    "b8a6",
+    "a1b1",
+    "e8e7"
+   ],
+   "source": "random seed=20261029 plies=8"
+  }
+ ]
+}

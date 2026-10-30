@@ -1,0 +1,22 @@
+{
+  "experiment_id": "exp021-ablate-transposition-table",
+  "started_at": "2026-10-29T22:02:05+00:00",
+  "lab_version": "1.0.0",
+  "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+  "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+  "experiment_file": "engine_lab/experiments/exp021-ablate-transposition-table.json",
+  "experiment_sha256": "dc79bf82c821f33ff1f49f89b686fda941e699642361415c44b6aafd480cf918",
+  "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpu": "Apple M1",
+    "logical_cpus": 8,
+    "memory_gb": 8.6,
+    "python": "3.12.2",
+    "python_chess": "1.11.2"
+  },
+  "workers": 4,
+  "command": "engine_lab/enginelab/__main__.py run exp021 --fresh",
+  "finished_at": "2026-10-29T22:06:51+00:00"
+}

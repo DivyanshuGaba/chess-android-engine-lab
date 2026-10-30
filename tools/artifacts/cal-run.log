@@ -1,0 +1,22 @@
+[23:37:04] exp041-device-vs-stockfish-1800 attempt 1 (rows so far: 1)
+
+com.divyanshu.chess.OnDeviceCalibrationRun:.
+
+Time: 1,521.884
+
+OK (1 test)
+
+
+[00:02:28] exp041-device-vs-stockfish-1800 pulled: 60 games
+[00:02:29] exp042-device-vs-stockfish-2200 attempt 1 (rows so far: 1)
+
+com.divyanshu.chess.OnDeviceCalibrationRun:.
+
+Time: 1,314.624
+
+OK (1 test)
+
+
+[00:24:25] exp042-device-vs-stockfish-2200 pulled: 60 games
+[00:24:25] exp043-device-vs-stockfish-2600 attempt 1 (rows so far: 1)
+CALIBRATION_DONE (2600 rung skipped on the phone)

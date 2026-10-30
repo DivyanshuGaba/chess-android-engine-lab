@@ -1,0 +1,120 @@
+exp020-ablate-quiescence: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 19s
+  20/100 pairs finished after 36s
+  30/100 pairs finished after 54s
+  40/100 pairs finished after 72s
+  50/100 pairs finished after 91s
+  60/100 pairs finished after 107s
+  70/100 pairs finished after 127s
+  80/100 pairs finished after 144s
+  90/100 pairs finished after 166s
+  100/100 pairs finished after 185s
+
+exp020-ablate-quiescence: 200 games, score 98.0%, Elo 676.1 (95% CI 561.8 to 1071.6, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp020-ablate-quiescence/report.md
+exp021-ablate-transposition-table: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 32s
+  20/100 pairs finished after 60s
+  30/100 pairs finished after 85s
+  40/100 pairs finished after 114s
+  50/100 pairs finished after 142s
+  60/100 pairs finished after 170s
+  70/100 pairs finished after 196s
+  80/100 pairs finished after 224s
+  90/100 pairs finished after 252s
+  100/100 pairs finished after 286s
+
+exp021-ablate-transposition-table: 200 games, score 62.0%, Elo 85.0 (95% CI 41.2 to 131.7, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp021-ablate-transposition-table/report.md
+exp022-ablate-reductions: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 30s
+  20/100 pairs finished after 61s
+  30/100 pairs finished after 87s
+  40/100 pairs finished after 117s
+  50/100 pairs finished after 153s
+  60/100 pairs finished after 178s
+  70/100 pairs finished after 211s
+  80/100 pairs finished after 238s
+  90/100 pairs finished after 268s
+  100/100 pairs finished after 298s
+
+exp022-ablate-reductions: 200 games, score 51.8%, Elo 12.2 (95% CI -30.0 to 54.7, pentanomial)
+No measurable difference: the 95% interval includes zero at this sample size.
+Report: engine_lab/results/exp022-ablate-reductions/report.md
+exp023-ablate-ordering-heuristics: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 33s
+  20/100 pairs finished after 61s
+  30/100 pairs finished after 90s
+  40/100 pairs finished after 125s
+  50/100 pairs finished after 149s
+  60/100 pairs finished after 179s
+  70/100 pairs finished after 209s
+  80/100 pairs finished after 239s
+  90/100 pairs finished after 266s
+  100/100 pairs finished after 296s
+
+exp023-ablate-ordering-heuristics: 200 games, score 50.0%, Elo -0.0 (95% CI -47.5 to 47.5, pentanomial)
+No measurable difference: the 95% interval includes zero at this sample size.
+Report: engine_lab/results/exp023-ablate-ordering-heuristics/report.md
+exp024-ablate-check-extension: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 28s
+  20/100 pairs finished after 56s
+  30/100 pairs finished after 76s
+  40/100 pairs finished after 106s
+  50/100 pairs finished after 131s
+  60/100 pairs finished after 162s
+  70/100 pairs finished after 191s
+  80/100 pairs finished after 226s
+  90/100 pairs finished after 250s
+  100/100 pairs finished after 277s
+
+exp024-ablate-check-extension: 200 games, score 54.8%, Elo 33.1 (95% CI -5.1 to 72.2, pentanomial)
+No measurable difference: the 95% interval includes zero at this sample size.
+Report: engine_lab/results/exp024-ablate-check-extension/report.md
+exp025-ablate-evaluation: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 28s
+  20/100 pairs finished after 57s
+  30/100 pairs finished after 84s
+  40/100 pairs finished after 116s
+  50/100 pairs finished after 145s
+  60/100 pairs finished after 173s
+  70/100 pairs finished after 202s
+  80/100 pairs finished after 228s
+  90/100 pairs finished after 257s
+  100/100 pairs finished after 289s
+
+exp025-ablate-evaluation: 200 games, score 69.2%, Elo 141.0 (95% CI 93.8 to 193.9, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp025-ablate-evaluation/report.md
+exp030-vs-stockfish-1800: 50 opening pairs, 0 already done, 50 to play
+  10/50 pairs finished after 129s
+  20/50 pairs finished after 255s
+  30/50 pairs finished after 403s
+  40/50 pairs finished after 541s
+  50/50 pairs finished after 638s
+
+exp030-vs-stockfish-1800: 100 games, score 66.5%, Elo 119.1 (95% CI 52.2 to 196.0, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp030-vs-stockfish-1800/report.md
+exp031-vs-stockfish-2200: 50 opening pairs, 0 already done, 50 to play
+  10/50 pairs finished after 166s
+  20/50 pairs finished after 278s
+  30/50 pairs finished after 396s
+  40/50 pairs finished after 540s
+  50/50 pairs finished after 679s
+
+exp031-vs-stockfish-2200: 100 games, score 34.0%, Elo -115.2 (95% CI -189.4 to -50.0, pentanomial)
+The candidate measured weaker than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp031-vs-stockfish-2200/report.md
+exp032-vs-stockfish-2600: 50 opening pairs, 0 already done, 50 to play
+  10/50 pairs finished after 141s
+  20/50 pairs finished after 290s
+  30/50 pairs finished after 420s
+  40/50 pairs finished after 528s
+  50/50 pairs finished after 637s
+
+exp032-vs-stockfish-2600: 100 games, score 13.5%, Elo -322.7 (95% CI -438.3 to -245.5, pentanomial)
+The candidate measured weaker than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp032-vs-stockfish-2600/report.md

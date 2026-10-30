@@ -1,0 +1,2080 @@
+{
+ "generated_at": "2026-10-30 01:32 UTC",
+ "experiments": [
+  {
+   "id": "exp000-aa-control",
+   "title": "A/A control: identical strength, jittered budgets",
+   "description": "Both sides have the same expected strength: the same options and an average budget of 10,000 nodes, with each move's budget randomly varied by up to 10% (seeded). Fixed-node Stockfish is deterministic, so without the jitter identical engines would replay mirrored games and the control would prove nothing. A sound harness must report a score near 50%; a large gap would reveal a bias in colours, openings or scoring.",
+   "hypothesis": "Score is 50% and the Elo interval includes zero.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "Stockfish 19",
+   "time_control": "baseline nodes 10000 (jitter +/-10%) | candidate nodes 10000 (jitter +/-10%)",
+   "baseline": {
+    "name": "Stockfish 19, 10k nodes",
+    "limits": "nodes 10000 (jitter +/-10%)",
+    "options": {
+     "Threads": 1,
+     "Hash": 16
+    }
+   },
+   "candidate": {
+    "name": "Stockfish 19, 10k nodes (copy)",
+    "limits": "nodes 10000 (jitter +/-10%)",
+    "options": {
+     "Threads": 1,
+     "Hash": 16
+    }
+   },
+   "wins": 63,
+   "draws": 87,
+   "losses": 50,
+   "score_pct": 53.25,
+   "elo_diff": 22.6,
+   "elo_ci_low": -12.4,
+   "elo_ci_high": 58.1,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 89.7,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.5325,
+    "elo": 22.6,
+    "low": -13.5,
+    "high": 59.2,
+    "los": 0.8902
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.5325,
+    "elo": 22.6,
+    "low": -12.4,
+    "high": 58.1,
+    "los": 0.8974
+   },
+   "pair_buckets": {
+    "0": 6,
+    "0.5": 20,
+    "1": 38,
+    "1.5": 27,
+    "2": 9
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "threefold_repetition": 64,
+    "checkmate": 9,
+    "adjudicated_win": 104,
+    "fifty_moves": 6,
+    "insufficient_material": 14,
+    "stalemate": 3
+   },
+   "avg_plies": 126.1,
+   "baseline_stats": {
+    "moves": 12607,
+    "avg_nps": 862145,
+    "avg_depth": 12.82,
+    "avg_move_ms": 12.9,
+    "peak_rss_mb": 372.0
+   },
+   "candidate_stats": {
+    "moves": 12609,
+    "avg_nps": 858309,
+    "avg_depth": 12.93,
+    "avg_move_ms": 12.97,
+    "peak_rss_mb": 371.4
+   },
+   "verdict": "No measurable difference: the 95% interval includes zero at this sample size.",
+   "created_at": "2026-10-29T19:40:31+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp000-aa-control"
+  },
+  {
+   "id": "exp001-doubled-nodes",
+   "title": "Positive control: twice the search effort",
+   "description": "The candidate searches 20,000 nodes per move against the baseline's 10,000. More search is known to help, so the harness should detect a clear advantage. This proves that the framework can see a real difference.",
+   "hypothesis": "The candidate scores clearly above 50% and the Elo interval excludes zero.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "Stockfish 19",
+   "time_control": "baseline nodes 10000 | candidate nodes 20000",
+   "baseline": {
+    "name": "Stockfish 19, 10k nodes",
+    "limits": "nodes 10000",
+    "options": {
+     "Threads": 1,
+     "Hash": 16
+    }
+   },
+   "candidate": {
+    "name": "Stockfish 19, 20k nodes",
+    "limits": "nodes 20000",
+    "options": {
+     "Threads": 1,
+     "Hash": 16
+    }
+   },
+   "wins": 96,
+   "draws": 91,
+   "losses": 13,
+   "score_pct": 70.75,
+   "elo_diff": 153.4,
+   "elo_ci_low": 122.6,
+   "elo_ci_high": 186.7,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.7075,
+    "elo": 153.4,
+    "low": 119.3,
+    "high": 190.7,
+    "los": 1.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.7075,
+    "elo": 153.4,
+    "low": 122.6,
+    "high": 186.7,
+    "los": 1.0
+   },
+   "pair_buckets": {
+    "0": 0,
+    "0.5": 3,
+    "1": 31,
+    "1.5": 46,
+    "2": 20
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 102,
+    "threefold_repetition": 76,
+    "stalemate": 3,
+    "checkmate": 7,
+    "insufficient_material": 10,
+    "fifty_moves": 2
+   },
+   "avg_plies": 118.7,
+   "baseline_stats": {
+    "moves": 11890,
+    "avg_nps": 926204,
+    "avg_depth": 12.97,
+    "avg_move_ms": 11.98,
+    "peak_rss_mb": 371.1
+   },
+   "candidate_stats": {
+    "moves": 11850,
+    "avg_nps": 925076,
+    "avg_depth": 14.42,
+    "avg_move_ms": 22.78,
+    "peak_rss_mb": 370.4
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T19:40:31+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp001-doubled-nodes"
+  },
+  {
+   "id": "exp002-medium-vs-easy",
+   "title": "App difficulty ladder: Medium against Easy",
+   "description": "The exact Stockfish settings the app uses for its Easy (UCI_Elo 1350, 0.1 s per move) and Medium (UCI_Elo 1800, 0.3 s per move) levels. Tests whether the levels differ in practice.",
+   "hypothesis": "Medium beats Easy; the Elo interval excludes zero.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 40,
+   "pairs": 40,
+   "incomplete_pairs": 0,
+   "games": 80,
+   "engine_version": "Stockfish 19",
+   "time_control": "baseline time 0.1 | candidate time 0.3",
+   "baseline": {
+    "name": "App Easy (Elo 1350, 0.1 s)",
+    "limits": "time 0.1",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 1350
+    }
+   },
+   "candidate": {
+    "name": "App Medium (Elo 1800, 0.3 s)",
+    "limits": "time 0.3",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 1800
+    }
+   },
+   "wins": 77,
+   "draws": 1,
+   "losses": 2,
+   "score_pct": 96.88,
+   "elo_diff": 596.5,
+   "elo_ci_low": 458.4,
+   "elo_ci_high": null,
+   "ci_open_ended": true,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 80,
+    "score": 0.9688,
+    "elo": 596.5,
+    "low": 456.5,
+    "high": 1600.0,
+    "los": 1.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 40,
+    "score": 0.9688,
+    "elo": 596.5,
+    "low": 458.4,
+    "high": 1600.0,
+    "los": 1.0
+   },
+   "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 2,
+    "1.5": 1,
+    "2": 37
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 61,
+    "checkmate": 18,
+    "threefold_repetition": 1
+   },
+   "avg_plies": 67.8,
+   "baseline_stats": {
+    "moves": 2716,
+    "avg_nps": 870880,
+    "avg_depth": 18.96,
+    "avg_move_ms": 99.27,
+    "peak_rss_mb": 353.3
+   },
+   "candidate_stats": {
+    "moves": 2704,
+    "avg_nps": 832232,
+    "avg_depth": 17.28,
+    "avg_move_ms": 298.79,
+    "peak_rss_mb": 358.8
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T19:40:32+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp002-medium-vs-easy"
+  },
+  {
+   "id": "exp003-hard-vs-medium",
+   "title": "App difficulty ladder: Hard against Medium",
+   "description": "The app's Hard level (no strength cap, 1 s per move) against its Medium level (UCI_Elo 1800, 0.3 s per move).",
+   "hypothesis": "Hard beats Medium; the Elo interval excludes zero.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 40,
+   "pairs": 40,
+   "incomplete_pairs": 0,
+   "games": 80,
+   "engine_version": "Stockfish 19",
+   "time_control": "baseline time 0.3 | candidate time 1.0",
+   "baseline": {
+    "name": "App Medium (Elo 1800, 0.3 s)",
+    "limits": "time 0.3",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 1800
+    }
+   },
+   "candidate": {
+    "name": "App Hard (full strength, 1 s)",
+    "limits": "time 1.0",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": false
+    }
+   },
+   "wins": 80,
+   "draws": 0,
+   "losses": 0,
+   "score_pct": 100.0,
+   "elo_diff": null,
+   "elo_ci_low": 530.3,
+   "elo_ci_high": null,
+   "ci_open_ended": true,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 80,
+    "score": 1.0,
+    "elo": 1600.0,
+    "low": 684.4,
+    "high": 1600.0,
+    "los": 1.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 40,
+    "score": 1.0,
+    "elo": 1600.0,
+    "low": 530.3,
+    "high": 1600.0,
+    "los": 1.0
+   },
+   "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 0,
+    "1.5": 0,
+    "2": 40
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "checkmate": 20,
+    "adjudicated_win": 60
+   },
+   "avg_plies": 47.0,
+   "baseline_stats": {
+    "moves": 1885,
+    "avg_nps": 793778,
+    "avg_depth": 21.32,
+    "avg_move_ms": 294.02,
+    "peak_rss_mb": 263.6
+   },
+   "candidate_stats": {
+    "moves": 1871,
+    "avg_nps": 779414,
+    "avg_depth": 30.15,
+    "avg_move_ms": 970.56,
+    "peak_rss_mb": 368.4
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T19:40:32+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp003-hard-vs-medium"
+  },
+  {
+   "id": "exp010-builtin-equal-time",
+   "title": "Built-in engine: improved search at 50 ms (about twice the baseline's time)",
+   "description": "The original fixed-depth minimax at depth 4 against the improved engine limited to 50 ms per move. The baseline turned out to average about 22 ms per move and the candidate about 45 ms, so this is NOT equal time: see exp014 for the matched-time run.",
+   "hypothesis": "The improved engine scores clearly above 50%.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "BuiltIn-UCI 1.0",
+   "time_control": "baseline depth 4 | candidate time 0.05",
+   "baseline": {
+    "name": "Built-in baseline (depth 4, as shipped Hard)",
+    "limits": "depth 4",
+    "options": {
+     "Variant": "baseline",
+     "Hash": 32,
+     "Depth": 4
+    }
+   },
+   "candidate": {
+    "name": "Built-in advanced, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 193,
+   "draws": 7,
+   "losses": 0,
+   "score_pct": 98.25,
+   "elo_diff": 699.7,
+   "elo_ci_low": 603.8,
+   "elo_ci_high": 919.6,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.9825,
+    "elo": 699.7,
+    "low": 602.5,
+    "high": 927.9,
+    "los": 1.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.9825,
+    "elo": 699.7,
+    "low": 603.8,
+    "high": 919.6,
+    "los": 1.0
+   },
+   "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 0,
+    "1.5": 7,
+    "2": 93
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 122,
+    "checkmate": 71,
+    "threefold_repetition": 7
+   },
+   "avg_plies": 65.5,
+   "baseline_stats": {
+    "moves": 6551,
+    "avg_nps": 515827,
+    "avg_depth": 4.0,
+    "avg_move_ms": 21.56,
+    "peak_rss_mb": 136.1
+   },
+   "candidate_stats": {
+    "moves": 6557,
+    "avg_nps": 681474,
+    "avg_depth": 4.48,
+    "avg_move_ms": 44.82,
+    "peak_rss_mb": 135.5
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T20:15:49+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp010-builtin-equal-time"
+  },
+  {
+   "id": "exp011-builtin-300ms",
+   "title": "Built-in engine: improved search with the app's 0.3 s budget",
+   "description": "Same baseline, but the improved engine gets 0.3 s per move, the time budget the app can afford. This is NOT an equal-time test: it shows what the extra time buys on top of exp010.",
+   "hypothesis": "The improved engine scores far above 50%.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 50,
+   "pairs": 50,
+   "incomplete_pairs": 0,
+   "games": 100,
+   "engine_version": "BuiltIn-UCI 1.0",
+   "time_control": "baseline depth 4 | candidate time 0.3",
+   "baseline": {
+    "name": "Built-in baseline (depth 4, as shipped Hard)",
+    "limits": "depth 4",
+    "options": {
+     "Variant": "baseline",
+     "Hash": 32,
+     "Depth": 4
+    }
+   },
+   "candidate": {
+    "name": "Built-in advanced, 300 ms",
+    "limits": "time 0.3",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 100,
+   "draws": 0,
+   "losses": 0,
+   "score_pct": 100.0,
+   "elo_diff": null,
+   "elo_ci_low": 568.9,
+   "elo_ci_high": null,
+   "ci_open_ended": true,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 100,
+    "score": 1.0,
+    "elo": 1600.0,
+    "low": 723.3,
+    "high": 1600.0,
+    "los": 1.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 50,
+    "score": 1.0,
+    "elo": 1600.0,
+    "low": 568.9,
+    "high": 1600.0,
+    "los": 1.0
+   },
+   "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 0,
+    "1.5": 0,
+    "2": 50
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 66,
+    "checkmate": 34
+   },
+   "avg_plies": 56.3,
+   "baseline_stats": {
+    "moves": 2814,
+    "avg_nps": 582474,
+    "avg_depth": 4.0,
+    "avg_move_ms": 20.05,
+    "peak_rss_mb": 132.4
+   },
+   "candidate_stats": {
+    "moves": 2813,
+    "avg_nps": 783831,
+    "avg_depth": 6.08,
+    "avg_move_ms": 250.38,
+    "peak_rss_mb": 136.6
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T20:15:49+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp011-builtin-300ms"
+  },
+  {
+   "id": "exp012-baseline-vs-stockfish-easy",
+   "title": "Calibration: original built-in engine against Stockfish Easy",
+   "description": "Stockfish limited to 1350 Elo at 0.1 s per move (the app's Easy level) is the baseline; the candidate is the original built-in engine at depth 4. A score below 50% means the built-in engine is weaker than that Stockfish preset.",
+   "hypothesis": "Measures where the original engine sits relative to a Stockfish preset; no direction assumed.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "Stockfish 19",
+   "time_control": "baseline time 0.1 | candidate depth 4",
+   "baseline": {
+    "name": "Stockfish 19, app Easy (Elo 1350, 0.1 s)",
+    "limits": "time 0.1",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 1350
+    }
+   },
+   "candidate": {
+    "name": "Built-in baseline (depth 4, as shipped Hard)",
+    "limits": "depth 4",
+    "options": {
+     "Variant": "baseline",
+     "Hash": 32,
+     "Depth": 4
+    }
+   },
+   "wins": 107,
+   "draws": 22,
+   "losses": 71,
+   "score_pct": 59.0,
+   "elo_diff": 63.2,
+   "elo_ci_low": 17.8,
+   "elo_ci_high": 111.0,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 99.7,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.59,
+    "elo": 63.2,
+    "low": 18.0,
+    "high": 110.7,
+    "los": 0.997
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.59,
+    "elo": 63.2,
+    "low": 17.8,
+    "high": 111.0,
+    "los": 0.9969
+   },
+   "pair_buckets": {
+    "0": 13,
+    "0.5": 8,
+    "1": 37,
+    "1.5": 14,
+    "2": 28
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 87,
+    "checkmate": 91,
+    "threefold_repetition": 22
+   },
+   "avg_plies": 68.3,
+   "baseline_stats": {
+    "moves": 6845,
+    "avg_nps": 1085418,
+    "avg_depth": 17.3,
+    "avg_move_ms": 100.18,
+    "peak_rss_mb": 376.8
+   },
+   "candidate_stats": {
+    "moves": 6820,
+    "avg_nps": 570480,
+    "avg_depth": 4.0,
+    "avg_move_ms": 18.2,
+    "peak_rss_mb": 145.0
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T20:15:49+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp012-baseline-vs-stockfish-easy"
+  },
+  {
+   "id": "exp013-advanced-vs-stockfish-easy",
+   "title": "Calibration: improved built-in engine against Stockfish Easy",
+   "description": "Stockfish at the app's Easy level (1350 Elo, 0.1 s) against the improved built-in engine at 0.3 s per move.",
+   "hypothesis": "Measures where the improved engine sits relative to the same Stockfish preset; no direction assumed.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 50,
+   "pairs": 50,
+   "incomplete_pairs": 0,
+   "games": 100,
+   "engine_version": "Stockfish 19",
+   "time_control": "baseline time 0.1 | candidate time 0.3",
+   "baseline": {
+    "name": "Stockfish 19, app Easy (Elo 1350, 0.1 s)",
+    "limits": "time 0.1",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 1350
+    }
+   },
+   "candidate": {
+    "name": "Built-in advanced, 300 ms",
+    "limits": "time 0.3",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 99,
+   "draws": 0,
+   "losses": 1,
+   "score_pct": 99.0,
+   "elo_diff": 798.3,
+   "elo_ci_low": 607.5,
+   "elo_ci_high": null,
+   "ci_open_ended": true,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 100,
+    "score": 0.99,
+    "elo": 798.3,
+    "low": 606.9,
+    "high": 1600.0,
+    "los": 1.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 50,
+    "score": 0.99,
+    "elo": 798.3,
+    "low": 607.5,
+    "high": 1600.0,
+    "los": 1.0
+   },
+   "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 1,
+    "1.5": 0,
+    "2": 49
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "checkmate": 30,
+    "adjudicated_win": 70
+   },
+   "avg_plies": 50.8,
+   "baseline_stats": {
+    "moves": 2544,
+    "avg_nps": 998529,
+    "avg_depth": 18.18,
+    "avg_move_ms": 99.58,
+    "peak_rss_mb": 357.5
+   },
+   "candidate_stats": {
+    "moves": 2533,
+    "avg_nps": 744737,
+    "avg_depth": 5.9,
+    "avg_move_ms": 252.4,
+    "peak_rss_mb": 129.7
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T20:15:50+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp013-advanced-vs-stockfish-easy"
+  },
+  {
+   "id": "exp014-builtin-equal-time-25ms",
+   "title": "Built-in engine: improved search at matched wall-clock time",
+   "description": "exp010 labelled itself equal-time, but the baseline averaged 21.6 ms per move and the candidate 44.8 ms, so the candidate had about twice the time. Here the candidate's budget is cut to 25 ms so its measured average move time matches the baseline's (the report shows the actual figures).",
+   "hypothesis": "The improved engine still scores clearly above 50% when its measured time per move matches the baseline's.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "BuiltIn-UCI 1.0",
+   "time_control": "baseline depth 4 | candidate time 0.025",
+   "baseline": {
+    "name": "Built-in baseline (depth 4, as shipped Hard)",
+    "limits": "depth 4",
+    "options": {
+     "Variant": "baseline",
+     "Hash": 32,
+     "Depth": 4
+    }
+   },
+   "candidate": {
+    "name": "Built-in advanced, 25 ms",
+    "limits": "time 0.025",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 187,
+   "draws": 13,
+   "losses": 0,
+   "score_pct": 96.75,
+   "elo_diff": 589.5,
+   "elo_ci_low": 515.3,
+   "elo_ci_high": 715.3,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.9675,
+    "elo": 589.5,
+    "low": 513.0,
+    "high": 722.1,
+    "los": 1.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.9675,
+    "elo": 589.5,
+    "low": 515.3,
+    "high": 715.3,
+    "los": 1.0
+   },
+   "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 0,
+    "1.5": 13,
+    "2": 87
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 112,
+    "checkmate": 75,
+    "threefold_repetition": 13
+   },
+   "avg_plies": 65.2,
+   "baseline_stats": {
+    "moves": 6514,
+    "avg_nps": 487040,
+    "avg_depth": 4.0,
+    "avg_move_ms": 23.75,
+    "peak_rss_mb": 138.9
+   },
+   "candidate_stats": {
+    "moves": 6529,
+    "avg_nps": 620896,
+    "avg_depth": 3.72,
+    "avg_move_ms": 24.95,
+    "peak_rss_mb": 130.7
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T20:15:50+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp014-builtin-equal-time-25ms"
+  },
+  {
+   "id": "exp020-ablate-quiescence",
+   "title": "Ablation: Quiescence search",
+   "description": "The full improved engine against the same engine with only one thing changed: without quiescence search. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+   "hypothesis": "Quiescence search helps: the full engine scores above 50%.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "BuiltIn-UCI 1.0",
+   "time_control": "baseline time 0.05 | candidate time 0.05",
+   "baseline": {
+    "name": "Without quiescence search, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32,
+     "Quiescence": false
+    }
+   },
+   "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 195,
+   "draws": 2,
+   "losses": 3,
+   "score_pct": 98.0,
+   "elo_diff": 676.1,
+   "elo_ci_low": 561.8,
+   "elo_ci_high": 1071.6,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.98,
+    "elo": 676.1,
+    "low": 560.8,
+    "high": 1090.3,
+    "los": 1.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.98,
+    "elo": 676.1,
+    "low": 561.8,
+    "high": 1071.6,
+    "los": 1.0
+   },
+   "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 3,
+    "1.5": 2,
+    "2": 95
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "checkmate": 17,
+    "adjudicated_win": 181,
+    "threefold_repetition": 1,
+    "insufficient_material": 1
+   },
+   "avg_plies": 74.6,
+   "baseline_stats": {
+    "moves": 7477,
+    "avg_nps": 446168,
+    "avg_depth": 4.84,
+    "avg_move_ms": 46.97,
+    "peak_rss_mb": 180.8
+   },
+   "candidate_stats": {
+    "moves": 7439,
+    "avg_nps": 720221,
+    "avg_depth": 4.53,
+    "avg_move_ms": 45.79,
+    "peak_rss_mb": 143.1
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T23:05:08+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp020-ablate-quiescence"
+  },
+  {
+   "id": "exp021-ablate-transposition-table",
+   "title": "Ablation: Transposition table",
+   "description": "The full improved engine against the same engine with only one thing changed: without the transposition table. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+   "hypothesis": "Transposition table helps: the full engine scores above 50%.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "BuiltIn-UCI 1.0",
+   "time_control": "baseline time 0.05 | candidate time 0.05",
+   "baseline": {
+    "name": "Without the transposition table, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32,
+     "TranspositionTable": false
+    }
+   },
+   "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 109,
+   "draws": 30,
+   "losses": 61,
+   "score_pct": 62.0,
+   "elo_diff": 85.0,
+   "elo_ci_low": 41.2,
+   "elo_ci_high": 131.7,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.62,
+    "elo": 85.0,
+    "low": 40.7,
+    "high": 132.3,
+    "los": 0.9999
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.62,
+    "elo": 85.0,
+    "low": 41.2,
+    "high": 131.7,
+    "los": 0.9999
+   },
+   "pair_buckets": {
+    "0": 8,
+    "0.5": 11,
+    "1": 36,
+    "1.5": 15,
+    "2": 30
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "checkmate": 35,
+    "adjudicated_win": 135,
+    "threefold_repetition": 17,
+    "insufficient_material": 12,
+    "fifty_moves": 1
+   },
+   "avg_plies": 119.8,
+   "baseline_stats": {
+    "moves": 11996,
+    "avg_nps": 848583,
+    "avg_depth": 4.48,
+    "avg_move_ms": 45.86,
+    "peak_rss_mb": 186.3
+   },
+   "candidate_stats": {
+    "moves": 11958,
+    "avg_nps": 802162,
+    "avg_depth": 5.27,
+    "avg_move_ms": 44.75,
+    "peak_rss_mb": 159.8
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T23:05:08+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp021-ablate-transposition-table"
+  },
+  {
+   "id": "exp022-ablate-reductions",
+   "title": "Ablation: Late move reductions",
+   "description": "The full improved engine against the same engine with only one thing changed: without late move reductions. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+   "hypothesis": "Late move reductions helps: the full engine scores above 50%.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "BuiltIn-UCI 1.0",
+   "time_control": "baseline time 0.05 | candidate time 0.05",
+   "baseline": {
+    "name": "Without late move reductions, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32,
+     "Reductions": false
+    }
+   },
+   "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 81,
+   "draws": 45,
+   "losses": 74,
+   "score_pct": 51.75,
+   "elo_diff": 12.2,
+   "elo_ci_low": -30.0,
+   "elo_ci_high": 54.7,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 71.5,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.5175,
+    "elo": 12.2,
+    "low": -30.3,
+    "high": 55.0,
+    "los": 0.7132
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.5175,
+    "elo": 12.2,
+    "low": -30.0,
+    "high": 54.7,
+    "los": 0.7146
+   },
+   "pair_buckets": {
+    "0": 12,
+    "0.5": 18,
+    "1": 40,
+    "1.5": 11,
+    "2": 19
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "checkmate": 40,
+    "adjudicated_win": 115,
+    "threefold_repetition": 29,
+    "insufficient_material": 13,
+    "fifty_moves": 3
+   },
+   "avg_plies": 124.9,
+   "baseline_stats": {
+    "moves": 12498,
+    "avg_nps": 839487,
+    "avg_depth": 4.71,
+    "avg_move_ms": 46.74,
+    "peak_rss_mb": 189.4
+   },
+   "candidate_stats": {
+    "moves": 12477,
+    "avg_nps": 790030,
+    "avg_depth": 5.27,
+    "avg_move_ms": 45.01,
+    "peak_rss_mb": 140.8
+   },
+   "verdict": "No measurable difference: the 95% interval includes zero at this sample size.",
+   "created_at": "2026-10-29T23:05:09+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp022-ablate-reductions"
+  },
+  {
+   "id": "exp023-ablate-ordering-heuristics",
+   "title": "Ablation: Killer and history move ordering",
+   "description": "The full improved engine against the same engine with only one thing changed: without killer/history ordering. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+   "hypothesis": "Killer and history move ordering helps: the full engine scores above 50%.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "BuiltIn-UCI 1.0",
+   "time_control": "baseline time 0.05 | candidate time 0.05",
+   "baseline": {
+    "name": "Without killer/history ordering, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32,
+     "OrderingHeuristics": false
+    }
+   },
+   "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 83,
+   "draws": 34,
+   "losses": 83,
+   "score_pct": 50.0,
+   "elo_diff": -0.0,
+   "elo_ci_low": -47.5,
+   "elo_ci_high": 47.5,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 50.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.5,
+    "elo": -0.0,
+    "low": -44.1,
+    "high": 44.1,
+    "los": 0.5
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.5,
+    "elo": -0.0,
+    "low": -47.5,
+    "high": 47.5,
+    "los": 0.5
+   },
+   "pair_buckets": {
+    "0": 21,
+    "0.5": 13,
+    "1": 31,
+    "1.5": 15,
+    "2": 20
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 127,
+    "checkmate": 39,
+    "insufficient_material": 10,
+    "threefold_repetition": 20,
+    "fifty_moves": 3,
+    "stalemate": 1
+   },
+   "avg_plies": 124.7,
+   "baseline_stats": {
+    "moves": 12476,
+    "avg_nps": 904095,
+    "avg_depth": 5.18,
+    "avg_move_ms": 45.06,
+    "peak_rss_mb": 187.0
+   },
+   "candidate_stats": {
+    "moves": 12465,
+    "avg_nps": 801317,
+    "avg_depth": 5.34,
+    "avg_move_ms": 44.94,
+    "peak_rss_mb": 140.5
+   },
+   "verdict": "No measurable difference: the 95% interval includes zero at this sample size.",
+   "created_at": "2026-10-29T23:05:10+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp023-ablate-ordering-heuristics"
+  },
+  {
+   "id": "exp024-ablate-check-extension",
+   "title": "Ablation: Check extension",
+   "description": "The full improved engine against the same engine with only one thing changed: without check extensions. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+   "hypothesis": "Check extension helps: the full engine scores above 50%.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "BuiltIn-UCI 1.0",
+   "time_control": "baseline time 0.05 | candidate time 0.05",
+   "baseline": {
+    "name": "Without check extensions, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32,
+     "CheckExtension": false
+    }
+   },
+   "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 90,
+   "draws": 39,
+   "losses": 71,
+   "score_pct": 54.75,
+   "elo_diff": 33.1,
+   "elo_ci_low": -5.1,
+   "elo_ci_high": 72.2,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 95.5,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.5475,
+    "elo": 33.1,
+    "low": -10.0,
+    "high": 77.2,
+    "los": 0.934
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.5475,
+    "elo": 33.1,
+    "low": -5.1,
+    "high": 72.2,
+    "los": 0.9551
+   },
+   "pair_buckets": {
+    "0": 8,
+    "0.5": 15,
+    "1": 43,
+    "1.5": 18,
+    "2": 16
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "checkmate": 40,
+    "adjudicated_win": 121,
+    "insufficient_material": 8,
+    "threefold_repetition": 27,
+    "fifty_moves": 4
+   },
+   "avg_plies": 117.8,
+   "baseline_stats": {
+    "moves": 11776,
+    "avg_nps": 783202,
+    "avg_depth": 5.62,
+    "avg_move_ms": 44.29,
+    "peak_rss_mb": 193.4
+   },
+   "candidate_stats": {
+    "moves": 11787,
+    "avg_nps": 792574,
+    "avg_depth": 5.24,
+    "avg_move_ms": 44.79,
+    "peak_rss_mb": 156.8
+   },
+   "verdict": "No measurable difference: the 95% interval includes zero at this sample size.",
+   "created_at": "2026-10-29T23:05:10+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp024-ablate-check-extension"
+  },
+  {
+   "id": "exp025-ablate-evaluation",
+   "title": "Ablation: Piece-square evaluation",
+   "description": "The full improved engine against the same engine with only one thing changed: with the original (material + centre) evaluation. Both get 50 ms per move, so a feature that costs time but does not pay for itself shows up as a negative result. A positive Elo means the feature helps.",
+   "hypothesis": "Piece-square evaluation helps: the full engine scores above 50%.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 100,
+   "pairs": 100,
+   "incomplete_pairs": 0,
+   "games": 200,
+   "engine_version": "BuiltIn-UCI 1.0",
+   "time_control": "baseline time 0.05 | candidate time 0.05",
+   "baseline": {
+    "name": "With the original (material + centre) evaluation, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32,
+     "Evaluation": "legacy"
+    }
+   },
+   "candidate": {
+    "name": "Full improved engine, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 124,
+   "draws": 29,
+   "losses": 47,
+   "score_pct": 69.25,
+   "elo_diff": 141.0,
+   "elo_ci_low": 93.8,
+   "elo_ci_high": 193.9,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.6925,
+    "elo": 141.0,
+    "low": 95.6,
+    "high": 191.6,
+    "los": 1.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.6925,
+    "elo": 141.0,
+    "low": 93.8,
+    "high": 193.9,
+    "los": 1.0
+   },
+   "pair_buckets": {
+    "0": 6,
+    "0.5": 8,
+    "1": 31,
+    "1.5": 13,
+    "2": 42
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 143,
+    "insufficient_material": 6,
+    "threefold_repetition": 10,
+    "checkmate": 28,
+    "fifty_moves": 13
+   },
+   "avg_plies": 119.9,
+   "baseline_stats": {
+    "moves": 11980,
+    "avg_nps": 800913,
+    "avg_depth": 5.23,
+    "avg_move_ms": 44.56,
+    "peak_rss_mb": 185.8
+   },
+   "candidate_stats": {
+    "moves": 11996,
+    "avg_nps": 782654,
+    "avg_depth": 5.11,
+    "avg_move_ms": 45.0,
+    "peak_rss_mb": 138.1
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T23:05:11+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp025-ablate-evaluation"
+  },
+  {
+   "id": "exp030-vs-stockfish-1800",
+   "title": "Calibration: built-in Hard against Stockfish at UCI_Elo 1800",
+   "description": "The built-in Hard engine (0.3 s per move, the app's setting) against Stockfish limited to 1800 Elo with the same 0.3 s per move. UCI_Elo is calibrated for long time controls, so treat it as a ladder rung, not a rating for the built-in engine.",
+   "hypothesis": "Finds the rung of this ladder where the built-in engine stops winning; no direction assumed.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 50,
+   "pairs": 50,
+   "incomplete_pairs": 0,
+   "games": 100,
+   "engine_version": "Stockfish 19",
+   "time_control": "baseline time 0.3 | candidate time 0.3",
+   "baseline": {
+    "name": "Stockfish 19, UCI_Elo 1800, 0.3 s",
+    "limits": "time 0.3",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 1800
+    }
+   },
+   "candidate": {
+    "name": "Built-in Hard (improved engine), 0.3 s",
+    "limits": "time 0.3",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 61,
+   "draws": 11,
+   "losses": 28,
+   "score_pct": 66.5,
+   "elo_diff": 119.1,
+   "elo_ci_low": 52.2,
+   "elo_ci_high": 196.0,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 100,
+    "score": 0.665,
+    "elo": 119.1,
+    "low": 54.9,
+    "high": 192.3,
+    "los": 0.9999
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 50,
+    "score": 0.665,
+    "elo": 119.1,
+    "low": 52.2,
+    "high": 196.0,
+    "los": 0.9998
+   },
+   "pair_buckets": {
+    "0": 3,
+    "0.5": 7,
+    "1": 15,
+    "1.5": 4,
+    "2": 21
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 71,
+    "checkmate": 18,
+    "threefold_repetition": 10,
+    "fifty_moves": 1
+   },
+   "avg_plies": 90.0,
+   "baseline_stats": {
+    "moves": 4492,
+    "avg_nps": 1169078,
+    "avg_depth": 18.88,
+    "avg_move_ms": 297.64,
+    "peak_rss_mb": 377.0
+   },
+   "candidate_stats": {
+    "moves": 4506,
+    "avg_nps": 781532,
+    "avg_depth": 6.61,
+    "avg_move_ms": 254.68,
+    "peak_rss_mb": 137.6
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T23:05:11+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp030-vs-stockfish-1800"
+  },
+  {
+   "id": "exp031-vs-stockfish-2200",
+   "title": "Calibration: built-in Hard against Stockfish at UCI_Elo 2200",
+   "description": "The built-in Hard engine (0.3 s per move, the app's setting) against Stockfish limited to 2200 Elo with the same 0.3 s per move. UCI_Elo is calibrated for long time controls, so treat it as a ladder rung, not a rating for the built-in engine.",
+   "hypothesis": "Finds the rung of this ladder where the built-in engine stops winning; no direction assumed.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 50,
+   "pairs": 50,
+   "incomplete_pairs": 0,
+   "games": 100,
+   "engine_version": "Stockfish 19",
+   "time_control": "baseline time 0.3 | candidate time 0.3",
+   "baseline": {
+    "name": "Stockfish 19, UCI_Elo 2200, 0.3 s",
+    "limits": "time 0.3",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 2200
+    }
+   },
+   "candidate": {
+    "name": "Built-in Hard (improved engine), 0.3 s",
+    "limits": "time 0.3",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 27,
+   "draws": 14,
+   "losses": 59,
+   "score_pct": 34.0,
+   "elo_diff": -115.2,
+   "elo_ci_low": -189.4,
+   "elo_ci_high": -50.0,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 0.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 100,
+    "score": 0.34,
+    "elo": -115.2,
+    "low": -186.5,
+    "high": -52.3,
+    "los": 0.0001
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 50,
+    "score": 0.34,
+    "elo": -115.2,
+    "low": -189.4,
+    "high": -50.0,
+    "los": 0.0002
+   },
+   "pair_buckets": {
+    "0": 19,
+    "0.5": 6,
+    "1": 17,
+    "1.5": 4,
+    "2": 4
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 77,
+    "threefold_repetition": 12,
+    "insufficient_material": 2,
+    "checkmate": 9
+   },
+   "avg_plies": 96.0,
+   "baseline_stats": {
+    "moves": 4786,
+    "avg_nps": 1177377,
+    "avg_depth": 18.0,
+    "avg_move_ms": 298.9,
+    "peak_rss_mb": 374.8
+   },
+   "candidate_stats": {
+    "moves": 4812,
+    "avg_nps": 781074,
+    "avg_depth": 6.78,
+    "avg_move_ms": 249.22,
+    "peak_rss_mb": 134.6
+   },
+   "verdict": "The candidate measured weaker than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T23:05:12+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp031-vs-stockfish-2200"
+  },
+  {
+   "id": "exp032-vs-stockfish-2600",
+   "title": "Calibration: built-in Hard against Stockfish at UCI_Elo 2600",
+   "description": "The built-in Hard engine (0.3 s per move, the app's setting) against Stockfish limited to 2600 Elo with the same 0.3 s per move. UCI_Elo is calibrated for long time controls, so treat it as a ladder rung, not a rating for the built-in engine.",
+   "hypothesis": "Finds the rung of this ladder where the built-in engine stops winning; no direction assumed.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 50,
+   "pairs": 50,
+   "incomplete_pairs": 0,
+   "games": 100,
+   "engine_version": "Stockfish 19",
+   "time_control": "baseline time 0.3 | candidate time 0.3",
+   "baseline": {
+    "name": "Stockfish 19, UCI_Elo 2600, 0.3 s",
+    "limits": "time 0.3",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 2600
+    }
+   },
+   "candidate": {
+    "name": "Built-in Hard (improved engine), 0.3 s",
+    "limits": "time 0.3",
+    "options": {
+     "Variant": "advanced",
+     "Hash": 32
+    }
+   },
+   "wins": 5,
+   "draws": 17,
+   "losses": 78,
+   "score_pct": 13.5,
+   "elo_diff": -322.7,
+   "elo_ci_low": -438.3,
+   "elo_ci_high": -245.5,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 0.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 100,
+    "score": 0.135,
+    "elo": -322.7,
+    "low": -420.6,
+    "high": -253.7,
+    "los": 0.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 50,
+    "score": 0.135,
+    "elo": -322.7,
+    "low": -438.3,
+    "high": -245.5,
+    "los": 0.0
+   },
+   "pair_buckets": {
+    "0": 33,
+    "0.5": 10,
+    "1": 4,
+    "1.5": 3,
+    "2": 0
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 72,
+    "checkmate": 11,
+    "threefold_repetition": 13,
+    "fifty_moves": 1,
+    "insufficient_material": 3
+   },
+   "avg_plies": 90.2,
+   "baseline_stats": {
+    "moves": 4494,
+    "avg_nps": 1147422,
+    "avg_depth": 17.61,
+    "avg_move_ms": 299.45,
+    "peak_rss_mb": 375.1
+   },
+   "candidate_stats": {
+    "moves": 4523,
+    "avg_nps": 770583,
+    "avg_depth": 6.58,
+    "avg_move_ms": 248.01,
+    "peak_rss_mb": 142.0
+   },
+   "verdict": "The candidate measured weaker than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-29T23:05:12+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp032-vs-stockfish-2600"
+  },
+  {
+   "id": "exp041-device-vs-stockfish-1800",
+   "title": "On the Pixel 8: built-in Hard against Stockfish at UCI_Elo 1800",
+   "description": "The same match as the Mac calibration, but played on the phone: the app's real built-in Hard engine (0.3 s per move, a fresh search table every move, exactly as the app plays it) against Stockfish limited to 1800 Elo, also 0.3 s per move, both running on the Pixel 8. The phone's CPU is much slower than the Mac for the built-in engine, so this measures what a player actually faces.",
+   "hypothesis": "Finds where the built-in engine stops winning on the phone itself; no direction assumed.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 30,
+   "pairs": 30,
+   "incomplete_pairs": 0,
+   "games": 60,
+   "engine_version": "Stockfish 19 and built-in advanced, on device",
+   "time_control": "device; 300 ms per move each",
+   "baseline": {
+    "name": "Stockfish 19, UCI_Elo 1800, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 1800
+    }
+   },
+   "candidate": {
+    "name": "Built-in Hard, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+     "Variant": "advanced"
+    }
+   },
+   "wins": 13,
+   "draws": 12,
+   "losses": 35,
+   "score_pct": 31.67,
+   "elo_diff": -133.6,
+   "elo_ci_low": -221.0,
+   "elo_ci_high": -60.0,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 0.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 60,
+    "score": 0.3167,
+    "elo": -133.6,
+    "low": -226.6,
+    "high": -56.2,
+    "los": 0.0002
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 30,
+    "score": 0.3167,
+    "elo": -133.6,
+    "low": -221.0,
+    "high": -60.0,
+    "los": 0.0001
+   },
+   "pair_buckets": {
+    "0": 10,
+    "0.5": 6,
+    "1": 11,
+    "1.5": 2,
+    "2": 1
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "adjudicated_win": 23,
+    "checkmate": 25,
+    "threefold_repetition": 11,
+    "insufficient_material": 1
+   },
+   "avg_plies": 90.7,
+   "baseline_stats": {
+    "moves": 2721,
+    "avg_nps": 264650,
+    "avg_depth": 16.0,
+    "avg_move_ms": 306.76,
+    "peak_rss_mb": null
+   },
+   "candidate_stats": {
+    "moves": 2718,
+    "avg_nps": 30682,
+    "avg_depth": 3.55,
+    "avg_move_ms": 224.57,
+    "peak_rss_mb": null
+   },
+   "verdict": "The candidate measured weaker than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-30T00:03:38+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp041-device-vs-stockfish-1800"
+  },
+  {
+   "id": "exp042-device-vs-stockfish-2200",
+   "title": "On the Pixel 8: built-in Hard against Stockfish at UCI_Elo 2200",
+   "description": "The same match as the Mac calibration, but played on the phone: the app's real built-in Hard engine (0.3 s per move, a fresh search table every move, exactly as the app plays it) against Stockfish limited to 2200 Elo, also 0.3 s per move, both running on the Pixel 8. The phone's CPU is much slower than the Mac for the built-in engine, so this measures what a player actually faces.",
+   "hypothesis": "Finds where the built-in engine stops winning on the phone itself; no direction assumed.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 30,
+   "pairs": 30,
+   "incomplete_pairs": 0,
+   "games": 60,
+   "engine_version": "Stockfish 19 and built-in advanced, on device",
+   "time_control": "device; 300 ms per move each",
+   "baseline": {
+    "name": "Stockfish 19, UCI_Elo 2200, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 2200
+    }
+   },
+   "candidate": {
+    "name": "Built-in Hard, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+     "Variant": "advanced"
+    }
+   },
+   "wins": 9,
+   "draws": 8,
+   "losses": 43,
+   "score_pct": 21.67,
+   "elo_diff": -223.3,
+   "elo_ci_low": -356.1,
+   "elo_ci_high": -131.5,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 0.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 60,
+    "score": 0.2167,
+    "elo": -223.3,
+    "low": -340.9,
+    "high": -138.9,
+    "los": 0.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 30,
+    "score": 0.2167,
+    "elo": -223.3,
+    "low": -356.1,
+    "high": -131.5,
+    "los": 0.0
+   },
+   "pair_buckets": {
+    "0": 17,
+    "0.5": 4,
+    "1": 6,
+    "1.5": 2,
+    "2": 1
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "checkmate": 19,
+    "adjudicated_win": 33,
+    "threefold_repetition": 8
+   },
+   "avg_plies": 78.7,
+   "baseline_stats": {
+    "moves": 2356,
+    "avg_nps": 249833,
+    "avg_depth": 18.14,
+    "avg_move_ms": 306.2,
+    "peak_rss_mb": null
+   },
+   "candidate_stats": {
+    "moves": 2363,
+    "avg_nps": 30110,
+    "avg_depth": 3.38,
+    "avg_move_ms": 225.04,
+    "peak_rss_mb": null
+   },
+   "verdict": "The candidate measured weaker than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-30T00:24:56+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp042-device-vs-stockfish-2200"
+  },
+  {
+   "id": "exp044-device-vs-stockfish-1350",
+   "title": "On the Pixel 8: built-in Hard against Stockfish at UCI_Elo 1350",
+   "description": "The same match as the Mac calibration, but played on the phone: the app's real built-in Hard engine (0.3 s per move, a fresh search table every move, exactly as the app plays it) against Stockfish limited to 1350 Elo, also 0.3 s per move, both running on the Pixel 8. The phone's CPU is much slower than the Mac for the built-in engine, so this measures what a player actually faces.",
+   "hypothesis": "Finds where the built-in engine stops winning on the phone itself; no direction assumed.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 30,
+   "pairs": 30,
+   "incomplete_pairs": 0,
+   "games": 60,
+   "engine_version": "Stockfish 19 and built-in advanced, on device",
+   "time_control": "device; 300 ms per move each",
+   "baseline": {
+    "name": "Stockfish 19, UCI_Elo 1350, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 1350
+    }
+   },
+   "candidate": {
+    "name": "Built-in Hard, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+     "Variant": "advanced"
+    }
+   },
+   "wins": 56,
+   "draws": 2,
+   "losses": 2,
+   "score_pct": 95.0,
+   "elo_diff": 511.5,
+   "elo_ci_low": 384.7,
+   "elo_ci_high": 1123.8,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 100.0,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 60,
+    "score": 0.95,
+    "elo": 511.5,
+    "low": 381.6,
+    "high": 1600.0,
+    "los": 1.0
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 30,
+    "score": 0.95,
+    "elo": 511.5,
+    "low": 384.7,
+    "high": 1123.8,
+    "los": 1.0
+   },
+   "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 2,
+    "1.5": 2,
+    "2": 26
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "checkmate": 16,
+    "adjudicated_win": 42,
+    "threefold_repetition": 2
+   },
+   "avg_plies": 60.9,
+   "baseline_stats": {
+    "moves": 1830,
+    "avg_nps": 212239,
+    "avg_depth": 16.07,
+    "avg_move_ms": 309.58,
+    "peak_rss_mb": null
+   },
+   "candidate_stats": {
+    "moves": 1824,
+    "avg_nps": 28459,
+    "avg_depth": 3.28,
+    "avg_move_ms": 232.42,
+    "peak_rss_mb": null
+   },
+   "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+   "created_at": "2026-10-30T01:06:22+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp044-device-vs-stockfish-1350"
+  },
+  {
+   "id": "exp045-device-vs-stockfish-1500",
+   "title": "On the Pixel 8: built-in Hard against Stockfish at UCI_Elo 1500",
+   "description": "The same match as the Mac calibration, but played on the phone: the app's real built-in Hard engine (0.3 s per move, a fresh search table every move, exactly as the app plays it) against Stockfish limited to 1500 Elo, also 0.3 s per move, both running on the Pixel 8. The phone's CPU is much slower than the Mac for the built-in engine, so this measures what a player actually faces.",
+   "hypothesis": "Finds where the built-in engine stops winning on the phone itself; no direction assumed.",
+   "status": "sufficient sample",
+   "warnings": [],
+   "min_pairs_for_conclusion": 30,
+   "pairs": 30,
+   "incomplete_pairs": 0,
+   "games": 60,
+   "engine_version": "Stockfish 19 and built-in advanced, on device",
+   "time_control": "device; 300 ms per move each",
+   "baseline": {
+    "name": "Stockfish 19, UCI_Elo 1500, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+     "Threads": 1,
+     "Hash": 16,
+     "UCI_LimitStrength": true,
+     "UCI_Elo": 1500
+    }
+   },
+   "candidate": {
+    "name": "Built-in Hard, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+     "Variant": "advanced"
+    }
+   },
+   "wins": 28,
+   "draws": 7,
+   "losses": 25,
+   "score_pct": 52.5,
+   "elo_diff": 17.4,
+   "elo_ci_low": -59.1,
+   "elo_ci_high": 95.6,
+   "ci_open_ended": false,
+   "ci_method": "pentanomial",
+   "confidence": 0.95,
+   "los_pct": 67.3,
+   "trinomial": {
+    "method": "trinomial",
+    "samples": 60,
+    "score": 0.525,
+    "elo": 17.4,
+    "low": -65.9,
+    "high": 102.8,
+    "los": 0.6601
+   },
+   "pentanomial": {
+    "method": "pentanomial",
+    "samples": 30,
+    "score": 0.525,
+    "elo": 17.4,
+    "low": -59.1,
+    "high": 95.6,
+    "los": 0.6732
+   },
+   "pair_buckets": {
+    "0": 4,
+    "0.5": 3,
+    "1": 15,
+    "1.5": 2,
+    "2": 6
+   },
+   "crashes": 0,
+   "illegal_moves": 0,
+   "timeouts": 0,
+   "terminations": {
+    "threefold_repetition": 7,
+    "checkmate": 19,
+    "adjudicated_win": 34
+   },
+   "avg_plies": 82.8,
+   "baseline_stats": {
+    "moves": 2490,
+    "avg_nps": 276409,
+    "avg_depth": 16.28,
+    "avg_move_ms": 308.83,
+    "peak_rss_mb": null
+   },
+   "candidate_stats": {
+    "moves": 2481,
+    "avg_nps": 28535,
+    "avg_depth": 3.51,
+    "avg_move_ms": 222.7,
+    "peak_rss_mb": null
+   },
+   "verdict": "No measurable difference: the 95% interval includes zero at this sample size.",
+   "created_at": "2026-10-30T00:57:10+00:00",
+   "reproduce": "cd engine_lab && ./run_experiment.sh exp045-device-vs-stockfish-1500"
+  }
+ ]
+}

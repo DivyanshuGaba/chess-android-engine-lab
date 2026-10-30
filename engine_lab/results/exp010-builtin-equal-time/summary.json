@@ -1,0 +1,115 @@
+{
+  "id": "exp010-builtin-equal-time",
+  "title": "Built-in engine: improved search at 50 ms (about twice the baseline's time)",
+  "description": "The original fixed-depth minimax at depth 4 against the improved engine limited to 50 ms per move. The baseline turned out to average about 22 ms per move and the candidate about 45 ms, so this is NOT equal time: see exp014 for the matched-time run.",
+  "hypothesis": "The improved engine scores clearly above 50%.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 100,
+  "pairs": 100,
+  "incomplete_pairs": 0,
+  "games": 200,
+  "engine_version": "BuiltIn-UCI 1.0",
+  "time_control": "baseline depth 4 | candidate time 0.05",
+  "baseline": {
+    "name": "Built-in baseline (depth 4, as shipped Hard)",
+    "limits": "depth 4",
+    "options": {
+      "Variant": "baseline",
+      "Hash": 32,
+      "Depth": 4
+    }
+  },
+  "candidate": {
+    "name": "Built-in advanced, 50 ms",
+    "limits": "time 0.05",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    }
+  },
+  "wins": 193,
+  "draws": 7,
+  "losses": 0,
+  "score_pct": 98.25,
+  "elo_diff": 699.7,
+  "elo_ci_low": 603.8,
+  "elo_ci_high": 919.6,
+  "ci_open_ended": false,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 100.0,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 200,
+    "score": 0.9825,
+    "elo": 699.7,
+    "low": 602.5,
+    "high": 927.9,
+    "los": 1.0
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 100,
+    "score": 0.9825,
+    "elo": 699.7,
+    "low": 603.8,
+    "high": 919.6,
+    "los": 1.0
+  },
+  "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 0,
+    "1.5": 7,
+    "2": 93
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "adjudicated_win": 122,
+    "checkmate": 71,
+    "threefold_repetition": 7
+  },
+  "avg_plies": 65.5,
+  "baseline_stats": {
+    "moves": 6551,
+    "avg_nps": 515827,
+    "avg_depth": 4.0,
+    "avg_move_ms": 21.56,
+    "peak_rss_mb": 136.1
+  },
+  "candidate_stats": {
+    "moves": 6557,
+    "avg_nps": 681474,
+    "avg_depth": 4.48,
+    "avg_move_ms": 44.82,
+    "peak_rss_mb": 135.5
+  },
+  "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+  "created_at": "2026-10-29T20:15:49+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp010-builtin-equal-time",
+  "meta": {
+    "experiment_id": "exp010-builtin-equal-time",
+    "started_at": "2026-10-29T20:00:43+00:00",
+    "lab_version": "1.0.0",
+    "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+    "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+    "experiment_file": "engine_lab/experiments/exp010-builtin-equal-time.json",
+    "experiment_sha256": "e3ccf882377bdb630a205a44333a09a4f716517e09cc2f63d366d9bc58685362",
+    "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+    "hardware": {
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "cpu": "Apple M1",
+      "logical_cpus": 8,
+      "memory_gb": 8.6,
+      "python": "3.12.2",
+      "python_chess": "1.11.2"
+    },
+    "workers": 4,
+    "command": "engine_lab/enginelab/__main__.py run exp010 --fresh",
+    "finished_at": "2026-10-29T20:02:43+00:00"
+  }
+}

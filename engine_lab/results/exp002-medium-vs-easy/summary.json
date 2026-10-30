@@ -1,0 +1,118 @@
+{
+  "id": "exp002-medium-vs-easy",
+  "title": "App difficulty ladder: Medium against Easy",
+  "description": "The exact Stockfish settings the app uses for its Easy (UCI_Elo 1350, 0.1 s per move) and Medium (UCI_Elo 1800, 0.3 s per move) levels. Tests whether the levels differ in practice.",
+  "hypothesis": "Medium beats Easy; the Elo interval excludes zero.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 40,
+  "pairs": 40,
+  "incomplete_pairs": 0,
+  "games": 80,
+  "engine_version": "Stockfish 19",
+  "time_control": "baseline time 0.1 | candidate time 0.3",
+  "baseline": {
+    "name": "App Easy (Elo 1350, 0.1 s)",
+    "limits": "time 0.1",
+    "options": {
+      "Threads": 1,
+      "Hash": 16,
+      "UCI_LimitStrength": true,
+      "UCI_Elo": 1350
+    }
+  },
+  "candidate": {
+    "name": "App Medium (Elo 1800, 0.3 s)",
+    "limits": "time 0.3",
+    "options": {
+      "Threads": 1,
+      "Hash": 16,
+      "UCI_LimitStrength": true,
+      "UCI_Elo": 1800
+    }
+  },
+  "wins": 77,
+  "draws": 1,
+  "losses": 2,
+  "score_pct": 96.88,
+  "elo_diff": 596.5,
+  "elo_ci_low": 458.4,
+  "elo_ci_high": null,
+  "ci_open_ended": true,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 100.0,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 80,
+    "score": 0.9688,
+    "elo": 596.5,
+    "low": 456.5,
+    "high": 1600.0,
+    "los": 1.0
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 40,
+    "score": 0.9688,
+    "elo": 596.5,
+    "low": 458.4,
+    "high": 1600.0,
+    "los": 1.0
+  },
+  "pair_buckets": {
+    "0": 0,
+    "0.5": 0,
+    "1": 2,
+    "1.5": 1,
+    "2": 37
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "adjudicated_win": 61,
+    "checkmate": 18,
+    "threefold_repetition": 1
+  },
+  "avg_plies": 67.8,
+  "baseline_stats": {
+    "moves": 2716,
+    "avg_nps": 870880,
+    "avg_depth": 18.96,
+    "avg_move_ms": 99.27,
+    "peak_rss_mb": 353.3
+  },
+  "candidate_stats": {
+    "moves": 2704,
+    "avg_nps": 832232,
+    "avg_depth": 17.28,
+    "avg_move_ms": 298.79,
+    "peak_rss_mb": 358.8
+  },
+  "verdict": "The candidate measured stronger than the baseline; the 95% interval excludes zero.",
+  "created_at": "2026-10-29T19:40:32+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp002-medium-vs-easy",
+  "meta": {
+    "experiment_id": "exp002-medium-vs-easy",
+    "started_at": "2026-10-29T19:11:10+00:00",
+    "lab_version": "1.0.0",
+    "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+    "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+    "experiment_file": "engine_lab/experiments/exp002-medium-vs-easy.json",
+    "experiment_sha256": "0b5cb68260cf8bfb453dbc7b5adb6628dabd652ee8b1066eedf3bca78cf104f5",
+    "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+    "hardware": {
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "cpu": "Apple M1",
+      "logical_cpus": 8,
+      "memory_gb": 8.6,
+      "python": "3.12.2",
+      "python_chess": "1.11.2"
+    },
+    "workers": 4,
+    "command": "engine_lab/enginelab/__main__.py run exp002 --pairs 40 --workers 4 --fresh",
+    "finished_at": "2026-10-29T19:15:46+00:00"
+  }
+}

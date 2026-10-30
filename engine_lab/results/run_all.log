@@ -1,0 +1,33 @@
+exp000-aa-control: 100 opening pairs, 0 already done, 100 to play
+  10/100 pairs finished after 10s
+  20/100 pairs finished after 20s
+  30/100 pairs finished after 28s
+  40/100 pairs finished after 36s
+  50/100 pairs finished after 44s
+  60/100 pairs finished after 55s
+  70/100 pairs finished after 65s
+  80/100 pairs finished after 75s
+  90/100 pairs finished after 83s
+  100/100 pairs finished after 95s
+
+exp000-aa-control: 200 games, score 53.2%, Elo 22.6 (95% CI -12.4 to 58.1, pentanomial)
+No measurable difference: the 95% interval includes zero at this sample size.
+Report: engine_lab/results/exp000-aa-control/report.md
+exp002-medium-vs-easy: 40 opening pairs, 0 already done, 40 to play
+  10/40 pairs finished after 92s
+  20/40 pairs finished after 166s
+  30/40 pairs finished after 219s
+  40/40 pairs finished after 276s
+
+exp002-medium-vs-easy: 80 games, score 96.9%, Elo 596.5 (95% CI 458.4 to 1600.0, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp002-medium-vs-easy/report.md
+exp003-hard-vs-medium: 40 opening pairs, 0 already done, 40 to play
+  10/40 pairs finished after 174s
+  20/40 pairs finished after 332s
+  30/40 pairs finished after 471s
+  40/40 pairs finished after 613s
+
+exp003-hard-vs-medium: 80 games, score 100.0%, Elo 1600.0 (95% CI 530.3 to 1600.0, pentanomial)
+The candidate measured stronger than the baseline; the 95% interval excludes zero.
+Report: engine_lab/results/exp003-hard-vs-medium/report.md

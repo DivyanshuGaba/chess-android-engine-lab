@@ -1,0 +1,106 @@
+{
+  "id": "exp045-device-vs-stockfish-1500",
+  "title": "On the Pixel 8: built-in Hard against Stockfish at UCI_Elo 1500",
+  "description": "The same match as the Mac calibration, but played on the phone: the app's real built-in Hard engine (0.3 s per move, a fresh search table every move, exactly as the app plays it) against Stockfish limited to 1500 Elo, also 0.3 s per move, both running on the Pixel 8. The phone's CPU is much slower than the Mac for the built-in engine, so this measures what a player actually faces.",
+  "hypothesis": "Finds where the built-in engine stops winning on the phone itself; no direction assumed.",
+  "status": "sufficient sample",
+  "warnings": [],
+  "min_pairs_for_conclusion": 30,
+  "pairs": 30,
+  "incomplete_pairs": 0,
+  "games": 60,
+  "engine_version": "Stockfish 19 and built-in advanced, on device",
+  "time_control": "device; 300 ms per move each",
+  "baseline": {
+    "name": "Stockfish 19, UCI_Elo 1500, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+      "Threads": 1,
+      "Hash": 16,
+      "UCI_LimitStrength": true,
+      "UCI_Elo": 1500
+    }
+  },
+  "candidate": {
+    "name": "Built-in Hard, 0.3 s (on the Pixel 8)",
+    "limits": "time 0.3",
+    "options": {
+      "Variant": "advanced"
+    }
+  },
+  "wins": 28,
+  "draws": 7,
+  "losses": 25,
+  "score_pct": 52.5,
+  "elo_diff": 17.4,
+  "elo_ci_low": -59.1,
+  "elo_ci_high": 95.6,
+  "ci_open_ended": false,
+  "ci_method": "pentanomial",
+  "confidence": 0.95,
+  "los_pct": 67.3,
+  "trinomial": {
+    "method": "trinomial",
+    "samples": 60,
+    "score": 0.525,
+    "elo": 17.4,
+    "low": -65.9,
+    "high": 102.8,
+    "los": 0.6601
+  },
+  "pentanomial": {
+    "method": "pentanomial",
+    "samples": 30,
+    "score": 0.525,
+    "elo": 17.4,
+    "low": -59.1,
+    "high": 95.6,
+    "los": 0.6732
+  },
+  "pair_buckets": {
+    "0": 4,
+    "0.5": 3,
+    "1": 15,
+    "1.5": 2,
+    "2": 6
+  },
+  "crashes": 0,
+  "illegal_moves": 0,
+  "timeouts": 0,
+  "terminations": {
+    "threefold_repetition": 7,
+    "checkmate": 19,
+    "adjudicated_win": 34
+  },
+  "avg_plies": 82.8,
+  "baseline_stats": {
+    "moves": 2490,
+    "avg_nps": 276409,
+    "avg_depth": 16.28,
+    "avg_move_ms": 308.83,
+    "peak_rss_mb": null
+  },
+  "candidate_stats": {
+    "moves": 2481,
+    "avg_nps": 28535,
+    "avg_depth": 3.51,
+    "avg_move_ms": 222.7,
+    "peak_rss_mb": null
+  },
+  "verdict": "No measurable difference: the 95% interval includes zero at this sample size.",
+  "created_at": "2026-10-30T00:57:10+00:00",
+  "reproduce": "cd engine_lab && ./run_experiment.sh exp045-device-vs-stockfish-1500",
+  "meta": {
+    "experiment_id": "exp045-device-vs-stockfish-1500",
+    "source": "on-device runner (OnDeviceCalibrationRun)",
+    "imported_at": "2026-10-30T00:57:10+00:00",
+    "hardware": {
+      "device": "Google Pixel 8",
+      "android": "17",
+      "sdk": 37,
+      "abis": "arm64-v8a",
+      "started_at": "2026-10-30T00:33:29.965522Z",
+      "pairs_requested": 30
+    }
+  }
+}

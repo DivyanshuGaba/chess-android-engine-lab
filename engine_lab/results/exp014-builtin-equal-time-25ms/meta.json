@@ -1,0 +1,22 @@
+{
+  "experiment_id": "exp014-builtin-equal-time-25ms",
+  "started_at": "2026-10-29T20:13:38+00:00",
+  "lab_version": "1.0.0",
+  "engine_binary": "engine_lab/bin/stockfish-macos-universal",
+  "engine_sha256": "8eed61129d1493c5d1f2fd9323f0c54c47ac49319911fbde18c6b9c87e8b13c5",
+  "experiment_file": "engine_lab/experiments/exp014-builtin-equal-time-25ms.json",
+  "experiment_sha256": "2003b6eb694713123ce3ca291d22eebd96a7420a7286167a7ea1c8a6a7da0a21",
+  "openings_ref": "8f454e24ac4e6c7a3e1eaf353021f930d6e634d4e241a82d4ff5cb830bd65020",
+  "hardware": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpu": "Apple M1",
+    "logical_cpus": 8,
+    "memory_gb": 8.6,
+    "python": "3.12.2",
+    "python_chess": "1.11.2"
+  },
+  "workers": 4,
+  "command": "engine_lab/enginelab/__main__.py run exp014 --fresh",
+  "finished_at": "2026-10-29T20:15:08+00:00"
+}

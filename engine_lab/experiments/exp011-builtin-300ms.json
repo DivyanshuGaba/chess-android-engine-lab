@@ -1,0 +1,45 @@
+{
+  "id": "exp011-builtin-300ms",
+  "title": "Built-in engine: improved search with the app's 0.3 s budget",
+  "description": "Same baseline, but the improved engine gets 0.3 s per move, the time budget the app can afford. This is NOT an equal-time test: it shows what the extra time buys on top of exp010.",
+  "hypothesis": "The improved engine scores far above 50%.",
+  "engine": "bin/stockfish-macos-universal",
+  "baseline": {
+    "name": "Built-in baseline (depth 4, as shipped Hard)",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "baseline",
+      "Hash": 32,
+      "Depth": 4
+    },
+    "limits": {
+      "depth": 4
+    }
+  },
+  "candidate": {
+    "name": "Built-in advanced, 300 ms",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "advanced",
+      "Hash": 32
+    },
+    "limits": {
+      "time": 0.3
+    }
+  },
+  "openings": {
+    "source": "random",
+    "seed": 20261029,
+    "count": 100,
+    "plies": 8,
+    "max_abs_cp": 100,
+    "filter_depth": 8
+  },
+  "adjudication": {
+    "cp": 1000,
+    "plies": 6,
+    "max_plies": 400
+  },
+  "workers": 4,
+  "min_pairs_for_conclusion": 50
+}

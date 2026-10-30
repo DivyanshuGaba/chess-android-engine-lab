@@ -1,0 +1,21 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+app/build/
+# Official Stockfish binaries are fetched by tools/fetch_stockfish.sh
+app/src/main/jniLibs/
+engine_lab/bin/
+engine_lab/.venv/
+engine_lab/**/__pycache__/
+.kotlin/
+build/
+.pytest_cache/
+*.pyc
+PROJECT_SUMMARY.md

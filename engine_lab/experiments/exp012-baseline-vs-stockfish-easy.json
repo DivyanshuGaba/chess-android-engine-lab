@@ -1,0 +1,46 @@
+{
+  "id": "exp012-baseline-vs-stockfish-easy",
+  "title": "Calibration: original built-in engine against Stockfish Easy",
+  "description": "Stockfish limited to 1350 Elo at 0.1 s per move (the app's Easy level) is the baseline; the candidate is the original built-in engine at depth 4. A score below 50% means the built-in engine is weaker than that Stockfish preset.",
+  "hypothesis": "Measures where the original engine sits relative to a Stockfish preset; no direction assumed.",
+  "engine": "bin/stockfish-macos-universal",
+  "baseline": {
+    "name": "Stockfish 19, app Easy (Elo 1350, 0.1 s)",
+    "options": {
+      "Threads": 1,
+      "Hash": 16,
+      "UCI_LimitStrength": true,
+      "UCI_Elo": 1350
+    },
+    "limits": {
+      "time": 0.1
+    }
+  },
+  "candidate": {
+    "name": "Built-in baseline (depth 4, as shipped Hard)",
+    "command": "../uci-cli/build/install/uci-cli/bin/uci-cli",
+    "options": {
+      "Variant": "baseline",
+      "Hash": 32,
+      "Depth": 4
+    },
+    "limits": {
+      "depth": 4
+    }
+  },
+  "openings": {
+    "source": "random",
+    "seed": 20261029,
+    "count": 100,
+    "plies": 8,
+    "max_abs_cp": 100,
+    "filter_depth": 8
+  },
+  "adjudication": {
+    "cp": 1000,
+    "plies": 6,
+    "max_plies": 400
+  },
+  "workers": 4,
+  "min_pairs_for_conclusion": 100
+}
